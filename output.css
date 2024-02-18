@@ -1,1998 +1,483 @@
-/*
-! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
-*/
-
-/*
-1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
-2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
-*/
-
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  /* 1 */
-  border-width: 0;
-  /* 2 */
-  border-style: solid;
-  /* 2 */
-  border-color: #e5e7eb;
-  /* 2 */
-}
-
-::before,
-::after {
-  --tw-content: '';
-}
-
-/*
-1. Use a consistent sensible line-height in all browsers.
-2. Prevent adjustments of font size after orientation changes in iOS.
-3. Use a more readable tab size.
-4. Use the user's configured `sans` font-family by default.
-5. Use the user's configured `sans` font-feature-settings by default.
-6. Use the user's configured `sans` font-variation-settings by default.
-7. Disable tap highlights on iOS
-*/
-
-html,
-:host {
-  line-height: 1.5;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-  -moz-tab-size: 4;
-  /* 3 */
-  -o-tab-size: 4;
-     tab-size: 4;
-  /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  /* 4 */
-  font-feature-settings: normal;
-  /* 5 */
-  font-variation-settings: normal;
-  /* 6 */
-  -webkit-tap-highlight-color: transparent;
-  /* 7 */
-}
-
-/*
-1. Remove the margin in all browsers.
-2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
-*/
-
-body {
-  margin: 0;
-  /* 1 */
-  line-height: inherit;
-  /* 2 */
-}
-
-/*
-1. Add the correct height in Firefox.
-2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
-3. Ensure horizontal rules are visible by default.
-*/
-
-hr {
-  height: 0;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  border-top-width: 1px;
-  /* 3 */
-}
-
-/*
-Add the correct text decoration in Chrome, Edge, and Safari.
-*/
-
-abbr:where([title]) {
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-}
-
-/*
-Remove the default font size and weight for headings.
-*/
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-/*
-Reset links to optimize for opt-in styling instead of opt-out.
-*/
-
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-/*
-Add the correct font weight in Edge and Safari.
-*/
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-/*
-1. Use the user's configured `mono` font-family by default.
-2. Use the user's configured `mono` font-feature-settings by default.
-3. Use the user's configured `mono` font-variation-settings by default.
-4. Correct the odd `em` font sizing in all browsers.
-*/
-
-code,
-kbd,
-samp,
-pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  /* 1 */
-  font-feature-settings: normal;
-  /* 2 */
-  font-variation-settings: normal;
-  /* 3 */
-  font-size: 1em;
-  /* 4 */
-}
-
-/*
-Add the correct font size in all browsers.
-*/
-
-small {
-  font-size: 80%;
-}
-
-/*
-Prevent `sub` and `sup` elements from affecting the line height in all browsers.
-*/
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-/*
-1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
-2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
-3. Remove gaps between table borders by default.
-*/
-
-table {
-  text-indent: 0;
-  /* 1 */
-  border-color: inherit;
-  /* 2 */
-  border-collapse: collapse;
-  /* 3 */
-}
-
-/*
-1. Change the font styles in all browsers.
-2. Remove the margin in Firefox and Safari.
-3. Remove default padding in all browsers.
-*/
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  /* 1 */
-  font-feature-settings: inherit;
-  /* 1 */
-  font-variation-settings: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  font-weight: inherit;
-  /* 1 */
-  line-height: inherit;
-  /* 1 */
-  color: inherit;
-  /* 1 */
-  margin: 0;
-  /* 2 */
-  padding: 0;
-  /* 3 */
-}
-
-/*
-Remove the inheritance of text transform in Edge and Firefox.
-*/
-
-button,
-select {
-  text-transform: none;
-}
-
-/*
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Remove default button styles.
-*/
-
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  -webkit-appearance: button;
-  /* 1 */
-  background-color: transparent;
-  /* 2 */
-  background-image: none;
-  /* 2 */
-}
-
-/*
-Use the modern Firefox focus style for all focusable elements.
-*/
-
-:-moz-focusring {
-  outline: auto;
-}
-
-/*
-Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
-*/
-
-:-moz-ui-invalid {
-  box-shadow: none;
-}
-
-/*
-Add the correct vertical alignment in Chrome and Firefox.
-*/
-
-progress {
-  vertical-align: baseline;
-}
-
-/*
-Correct the cursor style of increment and decrement buttons in Safari.
-*/
-
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/*
-1. Correct the odd appearance in Chrome and Safari.
-2. Correct the outline style in Safari.
-*/
-
-[type='search'] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
-}
-
-/*
-Remove the inner padding in Chrome and Safari on macOS.
-*/
-
-::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/*
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Change font properties to `inherit` in Safari.
-*/
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-}
-
-/*
-Add the correct display in Chrome and Safari.
-*/
-
-summary {
-  display: list-item;
-}
-
-/*
-Removes the default spacing and border for appropriate elements.
-*/
-
-blockquote,
-dl,
-dd,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-figure,
-p,
-pre {
-  margin: 0;
-}
-
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-legend {
-  padding: 0;
-}
-
-ol,
-ul,
-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/*
-Reset default styling for dialogs.
-*/
-
-dialog {
-  padding: 0;
-}
-
-/*
-Prevent resizing textareas horizontally by default.
-*/
-
-textarea {
-  resize: vertical;
-}
-
-/*
-1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
-2. Set the default placeholder color to the user's configured gray 400 color.
-*/
-
-input::-moz-placeholder, textarea::-moz-placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
-input::placeholder,
-textarea::placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
-/*
-Set the default cursor for buttons.
-*/
-
-button,
-[role="button"] {
-  cursor: pointer;
-}
-
-/*
-Make sure disabled buttons don't get the pointer cursor.
-*/
-
-:disabled {
-  cursor: default;
-}
-
-/*
-1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
-2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
-   This can trigger a poorly considered lint error in some tools but is included by design.
-*/
-
-img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
-  display: block;
-  /* 1 */
-  vertical-align: middle;
-  /* 2 */
-}
-
-/*
-Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
-*/
-
-img,
-video {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Make elements with the HTML hidden attribute stay hidden by default */
-
-[hidden] {
-  display: none;
-}
-
-*, ::before, ::after {
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-gradient-from-position:  ;
-  --tw-gradient-via-position:  ;
-  --tw-gradient-to-position:  ;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-}
-
-::backdrop {
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-gradient-from-position:  ;
-  --tw-gradient-via-position:  ;
-  --tw-gradient-to-position:  ;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-}
-
-.container {
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
-.sr-only {
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="https://i.ibb.co/8mzSGK8/fav.png">
+  <title>Moonlight Hub</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="The best Roblox scripts!">
+  <meta name="keywords" content="Moonlight, Moonlight Hub, Roblox script, Moonlight Criminality">
+  <meta name="author" content="Moonlight">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="image" content="https://i.ibb.co/8mzSGK8/fav.png"></meta>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    html,body {
+        height: 100dvh;
+        font-family: 'Poppins',sans-serif;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    #ud {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #eaeaf3;
+     color: transparent;
+    }
+    #faq .line {
+  background: #767cce;
   position: absolute;
-  width: 1px;
+  transition: none;
+  transform: scale(0);
+  opacity: 1;
+}
+#faq .line:nth-child(1) {
+  transform-origin: 100% 100%;
   height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+  width: 20%;
+  bottom: 0;
+}
+#faq .line:nth-child(4) {
+  transform-origin: 0 100%;
+  height: 1px;
+  width: 20%;
+  top: -1px;
+  right: 0;
+}
+#faq .line:nth-child(2) {
+  transform-origin: 100% 100%;
+  height: 100%;
+  width: 2px;
+  bottom: 0;
+  left: -1px;
+}
+#faq .line:nth-child(5) {
+  transform-origin: 100% 0;
+  height: 100%;
+  width: 2px;
+  bottom: 0;
+  right: -1px;
+}
+#faq .line:nth-child(3) {
+  transform-origin: 0 100%;
+  height: 1px;
+  width: 100%;
+  top: -1px;
+  left: -1px;
+}
+#faq .line:nth-child(6) {
+  transform-origin: 100% 0;
+  height: 1px;
+  width: 100%;
+  bottom: 0;
+  right: -1px;
+}
+#faq:hover > .line {
+  transform: scale(1);
+  opacity: 0;
+  transition: all 1s;
+}
+#faq:hover > .line:nth-child(2), #faq:hover > .line:nth-child(5) {
+  transition-delay: 0.5s;
+}
+#faq:hover > .line:nth-child(3), #faq:hover > .line:nth-child(6) {
+  transition-delay: 0.9s;
+}
+#faq:hover {
+    border-radius: 0.5vh;
+  background: rgba(255, 255, 255, 0.03);
 }
 
-.invisible {
+
+
+/* ANIMATIONS */
+:root {
+    --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-duration: 1s;
+}
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(25%);
+   }
+    100% {
+        opacity: 1;
+        transform: none;
+   }
+}
+@keyframes slideInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-25%);
+   }
+    100% {
+        opacity: 1;
+        transform: none;
+   }
+}
+@keyframes slideInleft {
+    0% {
+        opacity: 0;
+        transform: translateX(25%);
+   }
+    100% {
+        opacity: 1;
+        transform: none;
+   }
+}
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-25%);
+   }
+    100% {
+        opacity: 1;
+        transform: none;
+   }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+   }
+    100% {
+        opacity: 1;
+   }
+}
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.75);
+   }
+    100% {
+        opacity: 1;
+        transform: none;
+   }
+}
+@keyframes zoomReverseIn {
+    0% {
+        opacity: 0;
+        transform: scale(1.25);
+   }
+    100% {
+        opacity: 1;
+        transform: none;
+   }
+}
+@keyframes flipInY {
+    0% {
+        opacity: 0;
+        transform: perspective(90vw) rotateY(67.5deg);
+   }
+    100% {
+        opacity: 1;
+        transform: none;
+   }
+}
+[data-animation] {
+    opacity: 0;
+    animation-timing-function: var(--animation-timing-function);
+    animation-fill-mode: both;
+    animation-duration: var(--animation-duration);
+    will-change: transform, opacity;
+}
+.animations-disabled, .animations-disabled [data-animation] {
+    animation: none !important;
+    opacity: 1 !important;
+}
+.slideInUp {
+    animation-name: slideInUp;
+}
+.slideInDown {
+    animation-name: slideInDown;
+}
+.slideInLeft {
+    animation-name: slideInleft;
+}
+.slideInRight {
+    animation-name: slideInRight;
+}
+.fadeIn {
+    animation-name: fadeIn;
+}
+.zoomIn {
+    animation-name: zoomIn;
+}
+.zoomReverseIn {
+    animation-name: zoomReverseIn;
+}
+.flipInY {
+    animation-name: flipInY;
+}
+.flipOutY {
+    animation-name: flipInY;
+    animation-direction: reverse;
+}
+* {
+    box-sizing: border-box;
+    line-height: calc(1em + 0.25rem);
+}
+
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:2s;
+	-moz-animation-duration:2s;
+	animation-duration:2s;
+} 
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+ }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+ }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+ }
+}
+
+.loader {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #121212;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader--hidden {
+  opacity: 0;
   visibility: hidden;
 }
 
-.fixed {
-  position: fixed;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.relative {
-  position: relative;
-}
-
-.sticky {
-  position: sticky;
-}
-
-.inset-x-0 {
-  left: 0px;
-  right: 0px;
-}
-
-.top-0 {
-  top: 0px;
-}
-
-.left-0 {
-  left: 0px;
-}
-
-.right-0 {
-  right: 0px;
-}
-
-.top-\[200px\] {
-  top: 200px;
-}
-
-.top-\[700px\] {
-  top: 700px;
-}
-
-.top-\[400px\] {
-  top: 400px;
-}
-
-.top-\[300px\] {
-  top: 300px;
-}
-
-.top-\[320px\] {
-  top: 320px;
-}
-
-.top-\[350px\] {
-  top: 350px;
-}
-
-.top-\[390px\] {
-  top: 390px;
-}
-
-.top-\[280px\] {
-  top: 280px;
-}
-
-.top-\[250px\] {
-  top: 250px;
-}
-
-.top-\[-250px\] {
-  top: -250px;
-}
-
-.top-\[-150px\] {
-  top: -150px;
-}
-
-.top-\[-0px\] {
-  top: -0px;
-}
-
-.top-\[0px\] {
-  top: 0px;
-}
-
-.right-\[200px\] {
-  right: 200px;
-}
-
-.right-\[20px\] {
-  right: 20px;
-}
-
-.right-\[900px\] {
-  right: 900px;
-}
-
-.right-\[700px\] {
-  right: 700px;
-}
-
-.right-1 {
-  right: 0.25rem;
-}
-
-.right-\[180px\] {
-  right: 180px;
-}
-
-.right-\[140px\] {
-  right: 140px;
-}
-
-.right-\[150px\] {
-  right: 150px;
-}
-
-.right-\[159px\] {
-  right: 159px;
-}
-
-.right-\[154px\] {
-  right: 154px;
-}
-
-.right-\[152px\] {
-  right: 152px;
-}
-
-.right-\[155px\] {
-  right: 155px;
-}
-
-.top-\[5px\] {
-  top: 5px;
-}
-
-.top-\[10px\] {
-  top: 10px;
-}
-
-.right-\[170px\] {
-  right: 170px;
-}
-
-.right-\[175px\] {
-  right: 175px;
-}
-
-.right-\[178px\] {
-  right: 178px;
-}
-
-.top-1\/2 {
-  top: 50%;
-}
-
-.-left-2 {
-  left: -0.5rem;
-}
-
-.-top-8 {
-  top: -2rem;
-}
-
-.left-6 {
-  left: 1.5rem;
-}
-
-.top-2 {
-  top: 0.5rem;
-}
-
-.top-2\.5 {
-  top: 0.625rem;
-}
-
-.top-4 {
-  top: 1rem;
-}
-
-.left-8 {
-  left: 2rem;
-}
-
-.left-3 {
-  left: 0.75rem;
-}
-
-.-z-10 {
-  z-index: -10;
-}
-
-.z-10 {
-  z-index: 10;
-}
-
-.m-\[4\] {
-  margin: 4;
-}
-
-.mx-8 {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.mx-\[2\%\] {
-  margin-left: 2%;
-  margin-right: 2%;
-}
-
-.mx-\[10\%\] {
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.mx-\[2rem\] {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.mt-48 {
-  margin-top: 12rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
-.mt-8 {
-  margin-top: 2rem;
-}
-
-.mt-16 {
-  margin-top: 4rem;
-}
-
-.mt-\[50rem\] {
-  margin-top: 50rem;
-}
-
-.mt-\[35rem\] {
-  margin-top: 35rem;
-}
-
-.mt-\[30rem\] {
-  margin-top: 30rem;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
-
-.mt-\[20rem\] {
-  margin-top: 20rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
-.mb-28 {
-  margin-bottom: 7rem;
-}
-
-.mt-\[14rem\] {
-  margin-top: 14rem;
-}
-
-.mt-\[15rem\] {
-  margin-top: 15rem;
-}
-
-.mb-14 {
-  margin-bottom: 3.5rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
-.mt-\[13rem\] {
-  margin-top: 13rem;
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
-.inline-block {
-  display: inline-block;
-}
-
-.flex {
-  display: flex;
-}
-
-.hidden {
-  display: none;
-}
-
-.h-\[44px\] {
-  height: 44px;
-}
-
-.h-\[64rem\] {
-  height: 64rem;
-}
-
-.h-\[400px\] {
-  height: 400px;
-}
-
-.h-\[500px\] {
-  height: 500px;
-}
-
-.h-\[100px\] {
-  height: 100px;
-}
-
-.h-\[50px\] {
-  height: 50px;
-}
-
-.h-full {
-  height: 100%;
-}
-
-.h-\[40px\] {
-  height: 40px;
-}
-
-.h-6 {
-  height: 1.5rem;
-}
-
-.h-px {
-  height: 1px;
-}
-
-.h-12 {
-  height: 3rem;
-}
-
-.h-32 {
-  height: 8rem;
-}
-
-.w-\[44px\] {
-  width: 44px;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.w-\[90\%\] {
-  width: 90%;
-}
-
-.w-\[300px\] {
-  width: 300px;
-}
-
-.w-\[400px\] {
-  width: 400px;
-}
-
-.w-\[600px\] {
-  width: 600px;
-}
-
-.w-\[900px\] {
-  width: 900px;
-}
-
-.w-\[1300px\] {
-  width: 1300px;
-}
-
-.w-\[10rem\] {
-  width: 10rem;
-}
-
-.w-\[20rem\] {
-  width: 20rem;
-}
-
-.w-\[40rem\] {
-  width: 40rem;
-}
-
-.w-\[45rem\] {
-  width: 45rem;
-}
-
-.w-\[90rem\] {
-  width: 90rem;
-}
-
-.w-40 {
-  width: 10rem;
-}
-
-.w-\[40\%\] {
-  width: 40%;
-}
-
-.w-\[80\%\] {
-  width: 80%;
-}
-
-.w-\[100px\] {
-  width: 100px;
-}
-
-.w-\[60px\] {
-  width: 60px;
-}
-
-.w-\[4rem\] {
-  width: 4rem;
-}
-
-.w-\[19rem\] {
-  width: 19rem;
-}
-
-.w-\[16rem\] {
-  width: 16rem;
-}
-
-.w-\[14rem\] {
-  width: 14rem;
-}
-
-.w-\[12rem\] {
-  width: 12rem;
-}
-
-.w-\[25rem\] {
-  width: 25rem;
-}
-
-.w-\[30rem\] {
-  width: 30rem;
-}
-
-.w-\[32rem\] {
-  width: 32rem;
-}
-
-.w-\[35rem\] {
-  width: 35rem;
-}
-
-.w-\[50rem\] {
-  width: 50rem;
-}
-
-.w-\[28rem\] {
-  width: 28rem;
-}
-
-.w-\[29rem\] {
-  width: 29rem;
-}
-
-.w-\[60rem\] {
-  width: 60rem;
-}
-
-.w-\[30px\] {
-  width: 30px;
-}
-
-.w-\[0px\] {
-  width: 0px;
-}
-
-.w-6 {
-  width: 1.5rem;
-}
-
-.w-32 {
-  width: 8rem;
-}
-
-.w-36 {
-  width: 9rem;
-}
-
-.max-w-\[1300px\] {
-  max-width: 1300px;
-}
-
-.max-w-screen-xl {
-  max-width: 1280px;
-}
-
-.max-w-sm {
-  max-width: 24rem;
-}
-
-.origin-left {
-  transform-origin: left;
-}
-
-.-translate-y-1\/2 {
-  --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.rotate-12 {
-  --tw-rotate: 12deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-x-0 {
-  --tw-scale-x: 0;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.cursor-default {
-  cursor: default;
-}
-
-.cursor-pointer {
-  cursor: pointer;
-}
-
-.resize {
-  resize: both;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.gap-3 {
-  gap: 0.75rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
-}
-
-.gap-1 {
-  gap: 0.25rem;
-}
-
-.gap-4 {
-  gap: 1rem;
-}
-
-.gap-9 {
-  gap: 2.25rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
-}
-
-.gap-y-3 {
-  row-gap: 0.75rem;
-}
-
-.gap-y-7 {
-  row-gap: 1.75rem;
-}
-
-.overflow-hidden {
-  overflow: hidden;
-}
-
-.overflow-visible {
-  overflow: visible;
-}
-
-.rounded-3xl {
-  border-radius: 1.5rem;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
-.rounded-\[50\%\] {
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #545bb7;
+  border-top-color: #767cce;
   border-radius: 50%;
+  animation: loading 0.75s ease infinite;
 }
 
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-
-.rounded-full {
-  border-radius: 9999px;
-}
-
-.rounded-md {
-  border-radius: 0.375rem;
-}
-
-.border-2 {
-  border-width: 2px;
-}
-
-.border {
-  border-width: 1px;
-}
-
-.border-t {
-  border-top-width: 1px;
-}
-
-.border-none {
-  border-style: none;
-}
-
-.border-custom-primary {
-  --tw-border-opacity: 1;
-  border-color: rgb(118 124 206 / var(--tw-border-opacity));
-}
-
-.border-gray-100 {
-  --tw-border-opacity: 1;
-  border-color: rgb(243 244 246 / var(--tw-border-opacity));
-}
-
-.border-indigo-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(79 70 229 / var(--tw-border-opacity));
-}
-
-.border-opacity-0 {
-  --tw-border-opacity: 0;
-}
-
-.bg-custom-bg {
-  --tw-bg-opacity: 1;
-  background-color: rgb(18 18 18 / var(--tw-bg-opacity));
-}
-
-.bg-custom-primary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(118 124 206 / var(--tw-bg-opacity));
-}
-
-.bg-custom-secondary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 22 22 / var(--tw-bg-opacity));
-}
-
-.bg-custom-accent {
-  --tw-bg-opacity: 1;
-  background-color: rgb(84 91 183 / var(--tw-bg-opacity));
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-transparent {
-  background-color: transparent;
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-indigo-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(129 140 248 / var(--tw-bg-opacity));
-}
-
-.bg-indigo-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(79 70 229 / var(--tw-bg-opacity));
-}
-
-.bg-opacity-70 {
-  --tw-bg-opacity: 0.7;
-}
-
-.bg-gradient-to-r {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
-.from-custom-primary {
-  --tw-gradient-from: #767cce var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(118 124 206 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-custom-accent {
-  --tw-gradient-from: #545bb7 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(84 91 183 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-transparent {
-  --tw-gradient-from: transparent var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.via-gray-500 {
-  --tw-gradient-to: rgb(107 114 128 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #6b7280 var(--tw-gradient-via-position), var(--tw-gradient-to);
-}
-
-.via-custom-primary {
-  --tw-gradient-to: rgb(118 124 206 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #767cce var(--tw-gradient-via-position), var(--tw-gradient-to);
-}
-
-.via-custom-accent {
-  --tw-gradient-to: rgb(84 91 183 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #545bb7 var(--tw-gradient-via-position), var(--tw-gradient-to);
-}
-
-.to-custom-accent {
-  --tw-gradient-to: #545bb7 var(--tw-gradient-to-position);
-}
-
-.to-transparent {
-  --tw-gradient-to: transparent var(--tw-gradient-to-position);
-}
-
-.bg-clip-text {
-  -webkit-background-clip: text;
-          background-clip: text;
-}
-
-.fill-neutral-900 {
-  fill: #171717;
-}
-
-.stroke-neutral-800 {
-  stroke: #262626;
-}
-
-.p-5 {
-  padding: 1.25rem;
-}
-
-.p-4 {
-  padding: 1rem;
-}
-
-.p-2 {
-  padding: 0.5rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
-.px-24 {
-  padding-left: 6rem;
-  padding-right: 6rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.pb-6 {
-  padding-bottom: 1.5rem;
-}
-
-.pb-8 {
-  padding-bottom: 2rem;
-}
-
-.pt-16 {
-  padding-top: 4rem;
-}
-
-.pt-8 {
-  padding-top: 2rem;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-\[15px\] {
-  font-size: 15px;
-}
-
-.text-\[64px\] {
-  font-size: 64px;
-}
-
-.text-\[40px\] {
-  font-size: 40px;
-}
-
-.text-\[30px\] {
-  font-size: 30px;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
-.text-\[8px\] {
-  font-size: 8px;
-}
-
-.text-\[12px\] {
-  font-size: 12px;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-\[10px\] {
-  font-size: 10px;
-}
-
-.text-\[14px\] {
-  font-size: 14px;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.font-medium {
-  font-weight: 500;
-}
-
-.font-semibold {
-  font-weight: 600;
-}
-
-.font-extrabold {
-  font-weight: 800;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.tracking-tighter {
-  letter-spacing: -0.05em;
-}
-
-.text-custom-primary {
-  --tw-text-opacity: 1;
-  color: rgb(118 124 206 / var(--tw-text-opacity));
-}
-
-.text-custom-text {
-  --tw-text-opacity: 1;
-  color: rgb(229 225 236 / var(--tw-text-opacity));
-}
-
-.text-transparent {
-  color: transparent;
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-gray-500 {
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-
-.text-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
-.text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-
-.text-indigo-600 {
-  --tw-text-opacity: 1;
-  color: rgb(79 70 229 / var(--tw-text-opacity));
-}
-
-.text-opacity-80 {
-  --tw-text-opacity: 0.8;
-}
-
-.text-opacity-90 {
-  --tw-text-opacity: 0.9;
-}
-
-.text-opacity-60 {
-  --tw-text-opacity: 0.6;
-}
-
-.text-opacity-100 {
-  --tw-text-opacity: 1;
-}
-
-.text-opacity-50 {
-  --tw-text-opacity: 0.5;
-}
-
-.text-opacity-20 {
-  --tw-text-opacity: 0.2;
-}
-
-.opacity-50 {
-  opacity: 0.5;
-}
-
-.opacity-20 {
-  opacity: 0.2;
-}
-
-.opacity-30 {
-  opacity: 0.3;
-}
-
-.opacity-40 {
-  opacity: 0.4;
-}
-
-.opacity-75 {
-  opacity: 0.75;
-}
-
-.opacity-0 {
-  opacity: 0;
-}
-
-.blur-\[54px\] {
-  --tw-blur: blur(54px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.blur-\[44px\] {
-  --tw-blur: blur(44px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.blur-\[100px\] {
-  --tw-blur: blur(100px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.blur-\[14px\] {
-  --tw-blur: blur(14px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.blur-\[34px\] {
-  --tw-blur: blur(34px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.blur-\[24px\] {
-  --tw-blur: blur(24px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.blur-md {
-  --tw-blur: blur(12px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.blur-sm {
-  --tw-blur: blur(4px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.blur-2xl {
-  --tw-blur: blur(40px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition-transform {
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.duration-200 {
-  transition-duration: 200ms;
-}
-
-.duration-500 {
-  transition-duration: 500ms;
-}
-
-.duration-300 {
-  transition-duration: 300ms;
-}
-
-.duration-100 {
-  transition-duration: 100ms;
-}
-
-.duration-1000 {
-  transition-duration: 1000ms;
-}
-
-.duration-700 {
-  transition-duration: 700ms;
-}
-
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.ease-linear {
-  transition-timing-function: linear;
-}
-
-.ease-out {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
-.ease-in {
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-}
-
-.\[mask-image\:radial-gradient\(32rem_32rem_at_center\2c white\2c transparent\)\] {
-  -webkit-mask-image: radial-gradient(32rem 32rem at center,white,transparent);
-          mask-image: radial-gradient(32rem 32rem at center,white,transparent);
-}
-
-.hover\:translate-x-2:hover {
-  --tw-translate-x: 0.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:translate-y-2:hover {
-  --tw-translate-y: 0.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:translate-y-12:hover {
-  --tw-translate-y: 3rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:-translate-y-12:hover {
-  --tw-translate-y: -3rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:-translate-y-2:hover {
-  --tw-translate-y: -0.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:border-2:hover {
-  border-width: 2px;
-}
-
-.hover\:border-custom-primary:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(118 124 206 / var(--tw-border-opacity));
-}
-
-.hover\:border-opacity-100:hover {
-  --tw-border-opacity: 1;
-}
-
-.hover\:bg-custom-accent:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(84 91 183 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-indigo-600:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(79 70 229 / var(--tw-bg-opacity));
-}
-
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.hover\:text-custom-primary:hover {
-  --tw-text-opacity: 1;
-  color: rgb(118 124 206 / var(--tw-text-opacity));
-}
-
-.hover\:opacity-75:hover {
-  opacity: 0.75;
-}
-
-.focus\:outline-none:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.focus\:ring:focus {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
-.active\:bg-indigo-500:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
-}
-
-.group:hover .group-hover\:scale-x-100 {
-  --tw-scale-x: 1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:scale-x-50 {
-  --tw-scale-x: .5;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:opacity-100 {
-  opacity: 1;
-}
-
-.group:hover .group-hover\:duration-1000 {
-  transition-duration: 1000ms;
-}
-
-.group:hover .group-hover\:duration-500 {
-  transition-duration: 500ms;
-}
-
-.group:hover .group-hover\:duration-700 {
-  transition-duration: 700ms;
-}
-
-@media (min-width: 640px) {
-  .sm\:mt-0 {
-    margin-top: 0px;
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
   }
-
-  .sm\:flex {
-    display: flex;
-  }
-
-  .sm\:items-center {
-    align-items: center;
-  }
-
-  .sm\:justify-between {
-    justify-content: space-between;
-  }
-
-  .sm\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  .sm\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
+  to {
+    transform: rotate(1turn);
   }
 }
 
-@media (min-width: 768px) {
-  .md\:mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-  }
+  </style>
+</head>
+<body class="bg-custom-bg" data-animation="fadeIn" data-animation-delay="100ms">
+  <div class="loader"></div>
+    <div class="root w-full md:w-[90rem] justify-center mx-auto">
+        <svg class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-neutral-800 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]" aria-hidden="true">
+            <defs>
+              <pattern id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+                <path d="M.5 200V.5H200" fill="none"></path>
+              </pattern>
+            </defs>
+            <svg x="50%" y="-1" class="overflow-visible fill-neutral-900">
+              <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0"></path>
+            </svg>
+            <rect width="100%" height="100%" stroke-width="0" fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)"></rect>
+          </svg>
+          <div class="navbar justify-center flex items-center">
+        <nav class="p-5 bg-custom-secondary flex justify-between w-[90%] md:w-[56%]  items-center mt-6 rounded-3xl">
+            <div class="name">
+                <h1 class="font-semibold text-custom-text">Moonlight <span class="font-bold text-custom-primary">Hub</span></h1>
+            </div>
+            <div class="logo">
+                <img class="w-[44px] h-[44px]" src="https://i.ibb.co/8mzSGK8/fav.png">
+            </div>
+        </nav>
+    </div>
+        <main>
+            <div class="container justify-center items-center mx-auto max-w-[1300px] px-4 md:px-0">
+                <div class="glow-container flex justify-center items-center">
+                    <div class="glow absolute bg-custom-accent w-full lg:w-[1300px] h-[400px] blur-[44px] rounded-[50%] opacity-40 -z-10 top-[-250px]"></div>
+                </div>
+                
+                <div class="title text-[64px] text-center font-medium tracking-tighter mt-48">
+                    <h1 class="text-custom-text">Fully <span id="ud" class="italic">undetected</span>.</h1>
+                    <div id="moonlight">
+                    <h1 data-value="Moonlight" class="bg-gradient-to-r from-custom-primary to-custom-accent bg-clip-text text-transparent font-semibold">Moonlight</h1>
+                  </div>
+                  </div>
+                
+                <div class="text-info text-[15px] text-center lg:w-[37%] mx-auto text-custom-text text-opacity-80 mt-4">
+                    <p>Moonlight is the only option, with its many features ranging from <span class="text-white text-opacity-90">aimbot</span>, <span class="text-white text-opacity-90">esp</span>, skin changer & more.</p>
+                </div>
+                
+                <div class="discord justify-center items-center flex mt-6">
+                    <a href="https://discord.gg/8K3e5urMxr" target="_blank">
+                    <button
+                    class="overflow-hidden relative w-32 p-2 h-12 bg-custom-primary text-custom-text border-none rounded-md text-md font-semibold cursor-pointer relative z-10 group"
+                  >
+                    Get Started
+                    <span
+                      class="absolute w-36 h-32 -top-8 -left-2 bg-white rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left"
+                    ></span>
+                    <span
+                      class="absolute w-36 h-32 -top-8 -left-2 bg-indigo-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left"
+                    ></span>
+                    <span
+                      class="absolute w-36 h-32 -top-8 -left-2 bg-indigo-600 rotate-12 transform scale-x-0 group-hover:scale-x-50 transition-transform group-hover:duration-1000 duration-500 origin-left"
+                    ></span>
+                    <span
+                      class="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-4.5 left-3 z-10"
+                      >Join Discord</span
+                    >
+                  </button>
+                </a>
+            </div>
+            
+        </main>
+        <section>
 
-  .md\:mt-0 {
-    margin-top: 0px;
-  }
+            <div data-animation="slideInDown" data-animation-delay=".45s" class="ft-section justify-center items-center md:flex mt-[20rem] w-[20rem] md:w-[50rem] mx-auto md:gap-9">
+                  <div id="feature" class="ft bg-custom-secondary p-4 rounded-xl w-full cursor-default relative border-opacity-0 hover:border-opacity-100 border-custom-primary hover:-translate-y-2 hover:border-2 duration-300 ease-in-out">
+                    <div class="title-faq flex items-center gap-3">
+                        <div class="icon bg-custom-primary text-custom-text m-[4] rounded-lg p-2">
+                            <div class="glow absolute -z-2 bg-custom-accent overflow-hidden w-[60px] h-[50px] right-[178px] blur-2xl top-[10px]  rounded-[50%] opacity-40"></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
+                                <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7 7 0 0 0 2.79-.588M5.21 3.088A7 7 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474z"/>
+                                <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-custom-text font-medium">Fully Undetected</h2>
+                    </div>
+                </div>
 
-  .md\:flex {
-    display: flex;
-  }
+                <div id="feature" class="ft bg-custom-secondary p-4 mt-4 md:mt-0 rounded-xl w-full cursor-default relative border-opacity-0 hover:border-opacity-100 border-custom-primary hover:-translate-y-2 hover:border-2 duration-300 ease-in-out">
+                    <div class="title-faq flex items-center gap-3">
+                        <div class="icon bg-custom-primary text-custom-text m-[4] rounded-lg p-2">
+                            <div class="glow absolute -z-2 bg-custom-accent overflow-hidden w-[60px] h-[50px] right-[178px] blur-[44px] top-[10px]  rounded-[50%] opacity-40"></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bar-chart-fill" viewBox="0 0 16 16">
+                                <path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z"/>
+                              </svg>
+                        </div>
+                        <h2 class="text-custom-text font-medium">Optimzied</h2>
+                    </div>
+                </div>
 
-  .md\:w-\[90rem\] {
-    width: 90rem;
-  }
+                <div id="feature" class="ft bg-custom-secondary p-4 mt-4 md:mt-0 rounded-xl w-full cursor-default relative border-opacity-0 hover:border-opacity-100 border-custom-primary hover:-translate-y-2 hover:border-2 duration-300 ease-in-out">
+                    <div class="title-faq flex items-center gap-3">
+                        <div class="icon bg-custom-primary text-custom-text m-[4] rounded-lg p-2">
+                            <div class="glow absolute -z-2 bg-custom-accent overflow-hidden w-[60px] h-[50px] right-[178px] blur-[44px] top-[10px]  rounded-[50%] opacity-40"></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-file-earmark-fill" viewBox="0 0 16 16">
+                                <path d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2m5.5 1.5v2a1 1 0 0 0 1 1h2z"/>
+                              </svg>
+                        </div>
+                        <h2 class="text-custom-text font-medium">Configs</h2>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </section>  
+        
+        
+        <section data-animation="slideInDown" data-animation-delay="1s" class="flex justify-center items-center">
+            <div class="faq-container mt-[13rem] mb-4 w-[80%] md:w-[50rem] mx-auto">
+                <h2 class="text-custom-text font-semibold text-[30px] mb-5">Frequently Asked Questions</h2>
+                    <div id="faq" class="ft bg-custom-secondary p-4 rounded-xl w-full  cursor-default relative ">
+                        <div class='line'></div> 
+                        <div class='line'></div>
+                        <div class='line'></div>
+                        <div class='line'></div>
+                        <div class='line'></div>
+                        <div class='line'></div>
+                        <div class="title-faq flex items-center gap-3">
+                            <div class="icon bg-custom-primary text-custom-text m-[4] rounded-lg p-2 px-4">
+                              <a class="font-bold">1</a>
+                            </div>
+                            <h2 class="text-custom-text font-medium">What executor do I use?</h2>
+                        </div>
+                        <p class="mt-4 text-custom-text text-opacity-80">As of now <a class="text-custom-text text-opacity-100" href="https://loader.live" target="_blank">RO-EXEC</a> is recommended, once more executors release we will work hard to let it be useable.</p>
+                    </div>
 
-  .md\:w-\[56\%\] {
-    width: 56%;
-  }
+                        <div id="faq" class="ft mt-8 bg-custom-secondary p-4 rounded-xl w-full  cursor-default relative ">
+                            <div class='line'></div> 
+                            <div class='line'></div>
+                            <div class='line'></div>
+                            <div class='line'></div>
+                            <div class='line'></div>
+                            <div class='line'></div>
+                            <div class="title-faq flex items-center gap-3">
+                                <div class="icon bg-custom-primary text-custom-text m-[4] rounded-lg p-2 px-4">
+                                  <a class="font-bold">2</a>
+                                </div>
+                                <h2 class="text-custom-text font-medium">How much does it cost?</h2>
+                            </div>
+                            <p class="mt-4 text-custom-text text-opacity-80">We are completely <span class="text-custom-text text-opacity-100 font-semibold">free</span>! We develop <span class="italic">Moonlight</span> as a project for us to learn & enjoy.</p>
+                        </div>
 
-  .md\:w-\[50rem\] {
-    width: 50rem;
-  }
+                        <div id="faq" class="ft mt-8 bg-custom-secondary p-4 rounded-xl w-full  cursor-default relative ">
+                            <div class='line'></div> 
+                            <div class='line'></div>
+                            <div class='line'></div>
+                            <div class='line'></div>
+                            <div class='line'></div>
+                            <div class='line'></div>
+                            <div class="title-faq flex items-center gap-3">
+                                <div class="icon bg-custom-primary text-custom-text m-[4] rounded-lg p-2 px-4">
+                                  <a class="font-bold">3</a>
+                                </div>
+                                <h2 class="text-custom-text font-medium">Is it bannable?</h2>
+                            </div>
+                            <p class="mt-4 text-custom-text text-opacity-80">While cheating can lead to bans, the likelihood is low unless reported. To stay under the radar, consider <span class="text-custom-text text-opacity-100">legit</span> cheating.</p>
+                        </div>
+            </div>
+        </section>
+        <footer class="bg-custom-bg">
+            <div class="mx-auto max-w-screen-xl px-24 pb-8 pt-16 sm:px-6 lg:px-[5rem] lg:pt-24">
+              
+                <span class="relative flex justify-center">
+                    <div
+                      class="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-custom-accent to-transparent opacity-75"></div>
+                  </span>
+                  <div class="footer justify-between mt-5 px-8 flex">
+                    <p class="text-custom-text text-opacity-20 text-[12px]">All rights reserved Moonlight Hub, 2024 ©</p>
+                   <a href="https://discord.gg/8K3e5urMxr" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-discord text-custom-text text-opacity-20 hover:text-custom-primary duration-200 ease-out" viewBox="0 0 16 16">
+                        <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+                      </svg>
+                   </a>
+                  </div>
+            </div>
 
-  .md\:gap-9 {
-    gap: 2.25rem;
-  }
-
-  .md\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:mx-\[18rem\] {
-    margin-left: 18rem;
-    margin-right: 18rem;
-  }
-
-  .lg\:mt-24 {
-    margin-top: 6rem;
-  }
-
-  .lg\:w-\[37\%\] {
-    width: 37%;
-  }
-
-  .lg\:w-\[1300px\] {
-    width: 1300px;
-  }
-
-  .lg\:w-\[45rem\] {
-    width: 45rem;
-  }
-
-  .lg\:w-\[60\%\] {
-    width: 60%;
-  }
-
-  .lg\:w-\[50\%\] {
-    width: 50%;
-  }
-
-  .lg\:w-\[56\%\] {
-    width: 56%;
-  }
-
-  .lg\:w-\[200px\] {
-    width: 200px;
-  }
-
-  .lg\:w-\[100px\] {
-    width: 100px;
-  }
-
-  .lg\:w-\[70px\] {
-    width: 70px;
-  }
-
-  .lg\:w-\[40px\] {
-    width: 40px;
-  }
-
-  .lg\:w-\[60px\] {
-    width: 60px;
-  }
-
-  .lg\:justify-end {
-    justify-content: flex-end;
-  }
-
-  .lg\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .lg\:px-\[20rem\] {
-    padding-left: 20rem;
-    padding-right: 20rem;
-  }
-
-  .lg\:px-\[10rem\] {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-
-  .lg\:px-\[15rem\] {
-    padding-left: 15rem;
-    padding-right: 15rem;
-  }
-
-  .lg\:px-\[5rem\] {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
-  .lg\:pt-24 {
-    padding-top: 6rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .xl\:w-\[90rem\] {
-    width: 90rem;
-  }
-}
+            <script src="js/loader.js"></script>
+            <script src="js/glitch.js"></script>
+            <script src="js/anim.js"></script>
+</body>
+</html>
