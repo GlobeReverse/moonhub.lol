@@ -256,9 +256,48 @@
  }
 }
 
+.loader {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #121212;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #545bb7;
+  border-top-color: #767cce;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
   </style>
 </head>
 <body class="bg-custom-bg" data-animation="fadeIn" data-animation-delay="100ms">
+  <div class="loader"></div>
     <div class="root w-full md:w-[90rem] justify-center mx-auto">
         <svg class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-neutral-800 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]" aria-hidden="true">
             <defs>
@@ -435,6 +474,18 @@
                   </div>
             </div>
 
+            <script>
+              window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+  
+    loader.classList.add("loader--hidden");
+  
+    loader.addEventListener("transitionend", () => {
+      document.body.removeChild(loader);
+    });
+  });
+  
+            </script>
             <script src="anim.js"></script>
 </body>
 </html>
