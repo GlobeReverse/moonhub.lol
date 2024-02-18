@@ -94,6 +94,7 @@
 }
 
 
+
 /* ANIMATIONS */
 :root {
     --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -327,10 +328,11 @@
                 </div>
                 
                 <div class="title text-[64px] text-center font-medium tracking-tighter mt-48">
-                    <h1 class="text-custom-text">Fully <span id="ud" class="italic">undetected</span>.<br>
-                        <span class="bg-gradient-to-r from-custom-primary to-custom-accent bg-clip-text text-transparent font-semibold">Moonlight</span>
-                    </h1>
-                </div>
+                    <h1 class="text-custom-text">Fully <span id="ud" class="italic">undetected</span>.</h1>
+                    <div id="moonlight">
+                    <h1 data-value="Moonlight" class="bg-gradient-to-r from-custom-primary to-custom-accent bg-clip-text text-transparent font-semibold">Moonlight</h1>
+                  </div>
+                  </div>
                 
                 <div class="text-info text-[15px] text-center lg:w-[37%] mx-auto text-custom-text text-opacity-80 mt-4">
                     <p>Moonlight is the only option, with its many features ranging from <span class="text-white text-opacity-90">aimbot</span>, <span class="text-white text-opacity-90">esp</span>, skin changer & more.</p>
@@ -474,18 +476,8 @@
                   </div>
             </div>
 
-            <script>
-              window.addEventListener("load", () => {
-    const loader = document.querySelector(".loader");
-  
-    loader.classList.add("loader--hidden");
-  
-    loader.addEventListener("transitionend", () => {
-      document.body.removeChild(loader);
-    });
-  });
-  
-            </script>
-            <script src="anim.js"></script>
+            <script src="js/loader.js"></script>
+            <script src="js/glitch.js"></script>
+            <script src="js/anim.js"></script>
 </body>
 </html>
