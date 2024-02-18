@@ -294,6 +294,26 @@
     transform: rotate(1turn);
   }
 }
+.circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 1px 1px #545bb7;
+}
+
+.pulse {
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px #545bb7;
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+}
+
 
   </style>
 </head>
@@ -314,7 +334,7 @@
           <div class="navbar justify-center flex items-center">
         <nav class="p-5 bg-custom-secondary flex justify-between w-[90%] md:w-[56%]  items-center mt-6 rounded-3xl">
             <div class="name">
-                <h1 class="font-semibold text-custom-text">Moonlight <span class="font-bold text-custom-primary">Hub</span></h1>
+                <h1 class="font-semibold text-custom-text">Moonlight <span class="font-extrabold text-custom-primary">Hub</span></h1>
             </div>
             <div class="logo">
                 <img class="w-[44px] h-[44px]" src="https://i.ibb.co/8mzSGK8/fav.png">
@@ -326,8 +346,13 @@
                 <div class="glow-container flex justify-center items-center">
                     <div class="glow absolute bg-custom-accent w-full lg:w-[1300px] h-[400px] blur-[44px] rounded-[50%] opacity-40 -z-10 top-[-250px]"></div>
                 </div>
-                
-                <div class="title text-[64px] text-center font-medium tracking-tighter mt-48">
+                <div class="announcement mt-48 mb-6 justify-center flex items-center">
+                  <div class="px-4 py-2 bg-custom-secondary flex items-center text-custom-text gap-3 rounded-xl">
+                    <div class="circle pulse bg-custom-primary"></div>
+                    <p class="text-[12px] text-opacity-70 text-custom-text">The script is currently in beta for users.                    </p>
+                  </div>
+                </div>
+                <div class="title text-[64px] text-center font-medium tracking-tighter">
                     <h1 class="text-custom-text">Fully <span id="ud" class="italic">undetected</span>.</h1>
                     <div id="moonlight">
                     <h1 data-value="Moonlight" class="bg-gradient-to-r from-custom-primary to-custom-accent bg-clip-text text-transparent font-semibold">Moonlight</h1>
