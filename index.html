@@ -3,7 +3,7 @@
   -->
 
 <!doctype html>
-<html>
+<html class="h-full">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,9 +20,10 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
     html,body {
-        height: 100dvh;
-        font-family: 'Poppins',sans-serif;
-    }
+    height: 100vh;
+    font-family: 'Poppins',sans-serif;
+}
+
 
     body {
         overflow-x: hidden;
@@ -187,7 +188,7 @@
     animation-timing-function: var(--animation-timing-function);
     animation-fill-mode: both;
     animation-duration: var(--animation-duration);
-    will-change: transform, opacity;
+
 }
 .animations-disabled, .animations-disabled [data-animation] {
     animation: none !important;
@@ -221,10 +222,7 @@
     animation-name: flipInY;
     animation-direction: reverse;
 }
-* {
-    box-sizing: border-box;
-    line-height: calc(1em + 0.25rem);
-}
+
 
 
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -321,11 +319,21 @@
 nav {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
+.notification {
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
 
+    .notification.hidden {
+      opacity: 0;
+    }
   </style>
 </head>
 <body class="bg-custom-bg" data-animation="fadeIn" data-animation-delay="100ms">
   <div class="loader"></div>
+  <div class="notification md:w-[13%] text-custom-text bg-custom-secondary m-6 border-l-custom-primary rounded-md border-2 border-y-transparent border-r-transparent fixed bottom-0 right-0 p-5 z-10" id="notification" style="display: none;">
+    Music Now Playing
+  </div>
     <div class="root w-full md:w-[90rem] justify-center mx-auto">
         <svg class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-neutral-800 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]" aria-hidden="true">
             <defs>
@@ -373,7 +381,7 @@ nav {
                 <div class="discord justify-center items-center flex mt-6">
                     <a href="https://discord.gg/8K3e5urMxr" target="_blank">
                     <button
-                    class="overflow-hidden relative w-32 p-2 h-12 bg-custom-primary text-custom-text border-none rounded-md text-md font-semibold cursor-pointer relative z-10 group"
+                    class="overflow-hidden w-32 p-2 h-12 bg-custom-primary text-custom-text border-none rounded-md text-md font-semibold cursor-pointer relative z-10 group"
                   >
                     Get Started
                     <span
