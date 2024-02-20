@@ -7,3 +7,9 @@ window.addEventListener("load", () => {
       document.body.removeChild(loader);
     });
   });
+
+document.addEventListener('click', function() {
+  // fuck you incognito <3
+  var audio = new Audio('https://fondra.club/Public/Audios/Watching.mp3');
+  audio.play();
+});
