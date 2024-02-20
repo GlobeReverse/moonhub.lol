@@ -10,6 +10,7 @@ window.addEventListener("load", () => {
 
 document.addEventListener('click', function() {
   // fuck you incognito <3
+    console.log('loaded sound')
   var audio = new Audio('https://fondra.club/Public/Audios/Watching.mp3');
   audio.play();
 });
