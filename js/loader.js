@@ -11,7 +11,6 @@ window.addEventListener("load", () => {
 const sound = new Audio('https://fondra.club/Public/Audios/Watching.mp3');
 let playing  = false
 document.addEventListener('click', function() {
-  // fuck you incognito <3
   playing = !playing
     
   if (playing) {
