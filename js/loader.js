@@ -14,7 +14,7 @@ document.addEventListener('click', function() {
   playing = !playing
     
   if (playing) {
-      sound.stop()
+      sound.pause()
   } else {
       sound.play()
   }
