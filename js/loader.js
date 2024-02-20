@@ -8,14 +8,16 @@ window.addEventListener("load", () => {
     });
 });
 
-const sound = new Audio('https://fondra.club/Public/Audios/Watching.mp3');
-let playing  = false
-document.addEventListener('click', function() {
-  playing = !playing
-    
-  if (playing) {
-      sound.pause()
-  } else {
-      sound.play()
-  }
-});
+  const sound = new Audio('https://fondra.club/Public/Audios/Watching.mp3');
+  sound.volume = 0.4; // Adjust the volume here (0.0 to 1.0)
+  let playing = false;
+  
+  document.addEventListener('click', function() {
+    playing = !playing;
+      
+    if (playing) {
+        sound.pause();
+    } else {
+        sound.play();
+    }
+  });
