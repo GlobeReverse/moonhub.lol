@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/output.css">
+    <title>Successfully Verified</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .circ {
+        opacity: 0;
+        stroke-dasharray: 107;
+        stroke-dashoffset: 107;
+        transition: all 1s;
+      }
+
+      .tick {
+        stroke-dasharray: 21;
+        stroke-dashoffset: 21;
+        transition: stroke-dashoffset 1s 0.5s ease-out;
+      }
+
+      .cross {
+        opacity: 0;
+        stroke-dasharray: 19;
+        stroke-dashoffset: 19;
+        transition: all 0.25s ease-in;
+        transition-delay: 0.5s;
+      }
+
+      .cross+.cross {
+        transition-delay: 0.25s;
+      }
+
+      .drawn svg .path {
+        opacity: 1;
+        stroke-dashoffset: 0;
+      }
+    </style>
+  </head>
+  <body class="bg-custom-bg">
+    <div class="flex justify-center items-center h-screen">
+      <div class="status p-3  w-[23rem] rounded-lg mx-4 bg-red-600 bg-opacity-40 border-2 border-red-800">
+        <div class="items-center flex gap-2">
+          <h1 class="text-custom-text font-semibold text-opacity-100 text-[20px]">Failed to Verify</h1>
+          <svg version="1.1" id="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 37 37" xml:space="preserve">
+            <path
+                    class="circ path"
+                    style="fill:none;stroke:#EB0000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
+                    d="M30.5,6.5 L30.5,6.5 c6.6,6.6,6.6,17.4,0,24 l0,0 c-6.6,6.6-17.4,6.6-24,0 l0,0 c-6.6-6.6-6.6-17.4,0-24 l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"
+            />
+            <polyline
+                    class="cross path"
+                    style="fill:none; stroke: #EB0000; stroke-width:3; stroke-linejoin:round;stroke-miterlimit:10;"
+                    points="12,12 25,25"
+            />
+            <polyline
+                    class="cross path"
+                    style="fill:none; stroke: #EB0000; stroke-width:3; stroke-linejoin:round;stroke-miterlimit:10;"
+                    points="12,25 25,12"
+            />
+        </svg>
+        </div>
+        <div class="">
+          <p class="text-custom-text flex-wrap text-[14px] text-opacity-85">Lorem ipsum dolor sit amet consectetur.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      "use strict";
+      setTimeout(function() {
+        document.body.classList.add('drawn');
+      }, 500);
+    </script>
+  </body>
+</html>
