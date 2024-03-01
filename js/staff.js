@@ -58,29 +58,31 @@ if (!params.get("code")) {
             question = document.getElementById("HeadlineAct").value
     
             try {
-                const xhr = new XMLHttpRequest();
-                xhr.addEventListener('load', function() {
-                    const json = JSON.parse(xhr.responseText);
-                    console.log(json)
-                });
-          
-                xhr.addEventListener('error', function() {
-                    console.log("An Unexpected Error Has Occured, Please Retry 1.");
-                });
-          
-                xhr.open("POST", "https://hideout.one/api/staff/submit");
-                xhr.setRequestHeader("Content-Type", "application/json");
-                xhr.setRequestHeader("Age", age);
-                xhr.setRequestHeader("Reason", reason);
-                xhr.setRequestHeader("Different", different);
-                xhr.setRequestHeader("Active", active);
-                xhr.setRequestHeader("Question", question);
-                xhr.setRequestHeader("Token", params.get("code"));
-          
-                xhr.send();
+                const url = new URL("https://hideout.one/api/staff/submit");
+                url.searchParams.append("Age", age);
+                url.searchParams.append("Reason", reason);
+                url.searchParams.append("Different", different);
+                url.searchParams.append("Active", active);
+                url.searchParams.append("Question", question);
+                url.searchParams.append("Token", params.get("code"));
+            
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(json => {
+                        console.log(json);
+                    })
+                    .catch(error => {
+                        console.error('There was a problem with your fetch operation:', error);
+                    });
             } catch (error) {
-                console.log("An Unexpected Error Has Occured, Please Retry 2.");
+                console.log("An Unexpected Error Has Occurred, Please Retry 2.");
             }
+            
         }
     }
     
