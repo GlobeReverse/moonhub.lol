@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
     });
   });
 
-  const sound = new Audio('https://fondra.club/Public/Audios/Watching.mp3');
+  const sound = new Audio('https://fondra.club/Audios/Dream.mp3');
   sound.volume = 0.2; // volume here nigga
   let playing = false;
   
