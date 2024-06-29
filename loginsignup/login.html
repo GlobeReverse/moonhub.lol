@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moonhub.lol — Best Roblox Scripts</title>
+  <link href="/src/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="/src/assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    body {
+        background: linear-gradient(rgb(15, 16, 17) 0%, rgb(8, 8, 8) 50%);
+    }
+  </style>
+</head>
+<body class=" text-white">
+    <div class="h-screen flex justify-center items-center text-center">
+        <div class="">
+            <div class="logo">
+                <img src="https://i.ibb.co/x1zdWWH/fav.png" class="w-14 h-14 mx-auto">
+            </div>
+            <div class="moonlight mt-5 text-xl font-medium text-white/80">
+                <h2>Log in to Moonlight</h2>
+            </div>
+
+            <div class=" mt-5 tracking-tight text-white/80">
+                <button class="py-3.5 w-full bg-indigo-500/70 duration-200 ease-in-out hover:bg-indigo-500/80 rounded-lg text-sm border-2 border-indigo-300/20 flex items-center gap-2 text-center mx-auto">
+                   <p class="flex items-center gap-2 mx-auto"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                    <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+                  </svg>
+                Continue With Discord</p>
+                </button>
+                <!-- Hidden section to be revealed -->
+<div id="emailInputSection" class="hidden">
+    <hr id="emailHr" class="opacity-10 mt-5">
+    <div class="mt-5">
+        <input id="emailInput" placeholder="Enter your email address..." class="p-3 placeholder:text-white/50 w-full outline-none bg-secondary border-2 border-neutral-800/70 rounded-lg text-white text-sm">
+    </div>
+</div>
+
+           <!-- Continue with email button -->
+<button id="continueWithEmailButton" class="mt-4 py-3.5 px-20 bg-neutral-900/80 hover:bg-neutral-900/90 rounded-lg text-sm border-2 border-neutral-500/10 flex items-center gap-2 text-center mx-auto">
+    <p class="flex items-center gap-2 mx-auto">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+        </svg>
+        Continue With Email
+    </p>
+</button>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        // JavaScript to handle button click and animation
+        const button = document.getElementById('continueWithEmailButton');
+        const section = document.getElementById('emailInputSection');
+        const hr = document.getElementById('emailHr');
+        const input = document.getElementById('emailInput');
+    
+        button.addEventListener('click', function() {
+            section.classList.toggle('hidden');
+            section.classList.add('animate__animated', 'animate__fadeIn'); // Using animate.css classes for fadeIn animation
+        });
+    </script>
+</body>
