@@ -11,7 +11,7 @@
 ## Contributions
 - [Sye](https://github.com/Sye0001) Creating the landing page aswell as the login page
 - [Globe](https://github.com/GlobeReverse) Creating the dashboard aswell as the api it uses for everything
-- 
+  
 ## Copyright Notice
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
