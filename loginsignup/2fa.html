@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="origin-trial" content="Az520Inasey3TAyqLyojQa8MnmCALSEU29yQFW8dePZ7xQTvSt73pHazLFTK5f7SyLUJSo2uKLesEtEa9aUYcgMAAACPeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZyIsImV4cGlyeSI6MTcyNTQwNzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moonlight Hub - 2fa</title>
+    <link rel="icon" href="https://i.ibb.co/8mzSGK8/fav.png" type="image/x-icon">
+    <link href="/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+
+    <style>
+        body {
+            background: linear-gradient(rgb(15, 16, 17) 0%, rgb(8, 8, 8) 50%);
+        }
+
+        button {
+        font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+    }
+    </style>
+  <body translate="no">
+    <div class="h-screen flex justify-center items-center text-center">
+        <div class="">
+            <div class="logo">
+                <img src="https://i.ibb.co/x1zdWWH/fav.png" class="w-14 h-14 mx-auto">
+            </div>
+            <div class="moonlight mt-5 text-xl font-medium text-white/80">
+                <h2>Log in to Moonlight</h2>
+            </div>
+
+                <!-- Hidden section to be revealed -->
+<div id="emailInputSection" class="hidden">
+    <hr id="emailHr" class="opacity-10 mt-5">
+    <div class="mt-5">
+        <input id="codeInput" maxlength="12" type="text" placeholder="Enter your 2fa code" class="p-3 placeholder:text-white/50 w-full outline-none bg-secondary border-2 border-neutral-800/70 rounded-lg text-white text-sm">
+    </div>
+</div>
+
+           <!-- Continue with email button -->
+<button id="continueWithEmailButton" class="mt-4 py-3.5 px-20 bg-neutral-900/80 hover:bg-neutral-900/90 rounded-lg text-sm border-2 border-neutral-500/10 flex items-center gap-2 text-center mx-auto">
+    <p class="flex items-center gap-2 mx-auto">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+        </svg>
+        Submit
+    </p>
+</button>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script id="rendered-js">
+      function addClass(component, className) {
+        var e = document.getElementById(component);
+
+        if (e) {
+          e.removeAttribute('class');
+          e.classList.add(className);
+        }
+      };
+
+      function setAnim(e) {
+        var btn = document.getElementsByTagName('button');
+        for (i = 0; i < btn.length; i++) {
+          if (window.CP.shouldStopExecution(0)) break;
+          btn[i].classList.remove('active');
+        }
+        window.CP.exitedLoop(0);
+        e.classList.toggle('active');
+        value = e.innerText;
+        addClass('component', value);
+      }
+      var btn = document.getElementsByTagName('button');
+      btn[0].classList.add('active');
+      value = btn[0].innerText;
+      addClass('component', value);
+    </script>
+    <div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;">
+      <div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div>
+      <div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div>
+      <div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div>
+    </div>
+
+    <script>const J=G,Y=M,m=l;(function(i,u){const P=G,B=M,E=l,X=i();while(!![]){try{const W=-parseInt(E(0x1ae))/0x1+parseInt(B(0x1a6,'8sb^'))/0x2*(-parseInt(E(0x1a3))/0x3)+-parseInt(E(0x1ad))/0x4+parseInt(B(0x1bc,'0$K)'))/0x5+parseInt(B(0x197,'Ww)w'))/0x6+parseInt(E(0x1a0))/0x7*(parseInt(B(0x19d,'c9IY'))/0x8)+-parseInt(P(0x1a2))/0x9*(-parseInt(P(0x1af))/0xa);if(W===u)break;else X['push'](X['shift']());}catch(D){X['push'](X['shift']());}}}(O,0x9ff1a),document['getElementById']('emailInputSection')[m(0x1c3)]['toggle']('hidden'),document['getElementById'](Y(0x1b0,'ft#n'))['classList'][m(0x19a)]('animate__animated',J(0x194)));function M(l,G){const a=O();return M=function(V,U){V=V-0x18c;let i=a[V];if(M['USupdH']===undefined){var u=function(j){const E='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let B='',P='';for(let m=0x0,Y,J,n=0x0;J=j['charAt'](n++);~J&&(Y=m%0x4?Y*0x40+J:J,m++%0x4)?B+=String['fromCharCode'](0xff&Y>>(-0x2*m&0x6)):0x0){J=E['indexOf'](J);}for(let c=0x0,x=B['length'];c<x;c++){P+='%'+('00'+B['charCodeAt'](c)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(P);};const z=function(E,B){let P=[],m=0x0,Y,J='';E=u(E);let n;for(n=0x0;n<0x100;n++){P[n]=n;}for(n=0x0;n<0x100;n++){m=(m+P[n]+B['charCodeAt'](n%B['length']))%0x100,Y=P[n],P[n]=P[m],P[m]=Y;}n=0x0,m=0x0;for(let c=0x0;c<E['length'];c++){n=(n+0x1)%0x100,m=(m+P[n])%0x100,Y=P[n],P[n]=P[m],P[m]=Y,J+=String['fromCharCode'](E['charCodeAt'](c)^P[(P[n]+P[m])%0x100]);}return J;};M['JiMwRF']=z,l=arguments,M['USupdH']=!![];}const X=a[0x0],W=V+X,D=l[W];return!D?(M['KIkkeR']===undefined&&(M['KIkkeR']=!![]),i=M['JiMwRF'](i,U),l[W]=i):i=D,i;},M(l,G);}function G(l,M){const a=O();return G=function(V,U){V=V-0x18c;let i=a[V];if(G['FFWDlw']===undefined){var u=function(z){const j='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let E='',B='';for(let P=0x0,m,Y,J=0x0;Y=z['charAt'](J++);~Y&&(m=P%0x4?m*0x40+Y:Y,P++%0x4)?E+=String['fromCharCode'](0xff&m>>(-0x2*P&0x6)):0x0){Y=j['indexOf'](Y);}for(let n=0x0,c=E['length'];n<c;n++){B+='%'+('00'+E['charCodeAt'](n)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(B);};G['rOXTIg']=u,l=arguments,G['FFWDlw']=!![];}const X=a[0x0],W=V+X,D=l[W];return!D?(i=G['rOXTIg'](i),l[W]=i):i=D,i;},G(l,M);}function O(){const f=['WOdcT8kYWR9jqcLsxSkrWQxcJmonWRJdLCkoWR8MWPJdOc/dHG','cgL+A07cN8oVwv9OW6Thkq','mJy2ntKWofrHyu1qsa','/loginsignup/login.html','error','W4BcMCkls2fHvmokW7FdUuSOla','F1/dJhpdVa','BwvZC2fNzq','BM93','WO5NjSo6W7K/WRbg','mMzHienVzguGtxvZDcbczsa2ienOyxjHy3rLCNmGtg9UzY4','WQSlWPBdPG','classList','2fa','json','mZy3nZG3AeP0DMfb','WONdLu3cP3ZdKa3dN8oEe8kCW4i','C3rHCNrZv2L0Aa','nfldVCo4W5Gb','kbpcRxVcVttcSmkbu2bMFSohWOzjW5tcH2/cOCoGW4NcMmo6WPtcHK7cH8kMW7VdVKdcVwhdL8oXhhFdJmo9WRSydvldKW','56oGTMnQ','gaZcS2dcRa','yw5PBwf0zv9FzMfKzuLU','aqddQI1mwxqFsaFcGCoIm8o6pmkJW5qgpHVdRNddUCkYW6WqWRdcRNhdGZm+uSo9WOtdPSoqlxS3W5tcGCkPtu7cKa','location','FCooDutdJgzRWQXeBf/dU8kp','log','2930115VUUEQJ','add','substring','uCofEq7cIs5s','hcalWOldU2iBW50','BgvUz3rO','success','367787hJtvaA','l2rHC2HIB2fYzc9OB21LlMH0BwW','mtHeweD3q2u','1892790OrSFiO','WPpdHCompJW1dmo5W4ZdMeWal8kc','y29VA2LL','bt4PctBdVSk6','WQ4CWOddS8oHAmkW','C2vZC2LVBKLK','rSolCmoBcea','4neTJQe','trim','18DXGwCe','3897528SEqpjG','491996omRuwW','otKYnJiWmezyDeXxrW','r0/dMmkXhSkOWQ7dQCoTWRm0WRFdHdK3WOCk','sessionId','ECoWWRboWObdWOC9WQe','getElementById','y2XPy2S','y29UDgLUDwvxAxrOrw1HAwXcDxr0B24','Dg9vventDhjPBMC'];O=function(){return f;};return O();}function l(G,M){const a=O();return l=function(V,U){V=V-0x18c;let i=a[V];return i;},l(G,M);}const a=document[Y(0x1a4,'0$K)')](J(0x1b5)),V=document[m(0x1b3)](Y(0x1b2,'k0*v'));function U(u){const x=m,c=Y,n=J,X=document[n(0x1a5)][c(0x193,'!5]m')](';');for(let W=0x0;W<X['length'];W++){const D=X[W][x(0x1ab)]();if(D[n(0x18f)](u+'='))return D[x(0x19b)](u[n(0x19e)]+0x1);}return c(0x19c,'XKjA');}a['addEventListener'](J(0x1b4),async function(i){const b=J,C=m,d=Y,u=V[d(0x1bd,'Lbmn')][C(0x1ab)](),X=new Notyf();if(u[d(0x190,'1x2S')]==0x6)try{const W=await fetch('https://hideout.one/website/dashboard/2fa/'+U(C(0x1c4))+'/'+u),D=await W[C(0x18c)]();if(!D[C(0x19f)]||!D[C(0x1b1)])D[b(0x1be)]=='Invalid\x20Auth\x20Token'?window[C(0x196)][d(0x1c2,'ETD3')]=C(0x1ba):X['error']({'message':D[d(0x1a7,'ETD3')],'duration':0xdac,'dismissible':!![]});else{const z=new Date(Date[b(0x1bf)]()+0x7*0x18*0x3c*0x3c*0x3e8);document[d(0x1a9,'K0Pc')]='session_id='+D[b(0x1a8)]+';\x20path=/dashboard;\x20expires='+z[b(0x1b6)]()+d(0x1b7,'s0dx'),X[C(0x19f)]({'message':d(0x191,'!5]m'),'duration':0xdac,'dismissible':!![]}),window[d(0x1c0,'5BeX')]['href']=b(0x1a1);}}catch(j){console[C(0x198)](j),X['error']({'message':d(0x195,'gKB4'),'duration':0xdac,'dismissible':!![]});}else X[C(0x1bb)]({'message':b(0x1c1),'duration':0xdac,'dismissible':!![]});});</script>
+  </body>
+</html>

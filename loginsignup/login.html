@@ -7,9 +7,33 @@
   <link href="/output.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
   <style>
     body {
         background: linear-gradient(rgb(15, 16, 17) 0%, rgb(8, 8, 8) 50%);
+    }
+
+    button {
+        font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
     }
   </style>
 </head>
@@ -24,7 +48,7 @@
             </div>
 
             <div class=" mt-5 tracking-tight text-white/80">
-                <button class="py-3.5 w-full bg-indigo-500/70 duration-200 ease-in-out hover:bg-indigo-500/80 rounded-lg text-sm border-2 border-indigo-300/20 flex items-center gap-2 text-center mx-auto">
+                <button id="discordLogin" class="py-3.5 w-full bg-indigo-500/70 duration-200 ease-in-out hover:bg-indigo-500/80 rounded-lg text-sm border-2 border-indigo-300/20 flex items-center gap-2 text-center mx-auto">
                    <p class="flex items-center gap-2 mx-auto"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
                     <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
                   </svg>
@@ -34,7 +58,7 @@
 <div id="emailInputSection" class="hidden">
     <hr id="emailHr" class="opacity-10 mt-5">
     <div class="mt-5">
-        <input id="emailInput" type="email" placeholder="Enter your email address..." class="p-3 placeholder:text-white/50 w-full outline-none bg-secondary border-2 border-neutral-800/70 rounded-lg text-white text-sm">
+        <input id="emailInput" maxlength="12" type="text" placeholder="Enter your moonlight key..." class="p-3 placeholder:text-white/50 w-full outline-none bg-secondary border-2 border-neutral-800/70 rounded-lg text-white text-sm">
     </div>
 </div>
 
@@ -44,7 +68,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
             <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
         </svg>
-        Continue With Email
+        Continue With Key
     </p>
 </button>
 
@@ -54,18 +78,5 @@
         </div>
     </div>
 
-
-
-    <script>
-        // JavaScript to handle button click and animation
-        const button = document.getElementById('continueWithEmailButton');
-        const section = document.getElementById('emailInputSection');
-        const hr = document.getElementById('emailHr');
-        const input = document.getElementById('emailInput');
-    
-        button.addEventListener('click', function() {
-            section.classList.toggle('hidden');
-            section.classList.add('animate__animated', 'animate__fadeIn'); 
-        });
-    </script>
+    <script>function O(){const r=['zgLZy29YzeXVz2LU','W6ldHaJcKSkEamkzW48tjSkUoJ3dUcNcKG','otuYotbjD0vUteK','success','l2XVz2LUC2LNBNvWlZjMys5ODg1S','WPi8AMddLay','animate__animated','toUTCString','xLP7WOK','WPO3xSkSguPMbmohfmoLs8oYmCo6','mJGXnZi2ovr6qK5mvW','ywrKrxzLBNrmAxn0zw5LCG','B0eEaIBcPCoRDqm','130163cPweuh','1545832xebDGO','rxjYB3iGt2nJDxjLzcbxAgvUifnLBMrPBMCGuMvXDwvZDcaO','getElementById','WOVdG8oFgSkVW64','Ahr0Chm6lY9KAxnJB3jKlMnVBs9Vyxv0AdiVyxv0Ag9YAxPLp2nSAwvUDf9Pzd0XmJC5nZmYoty4mdC1nJG5otK0jNjLC3bVBNnLx3r5Cgu9y29KzszYzwrPCMvJDf91CMK9Ahr0ChmLm0eLmKyLmKzOAwrLB3v0lM9UzsuYrNDLyNnPDguLmKzVyxv0AczZy29Wzt1PzgvUDgLMEq','continueWithEmailButton','W7iigSkOp8kVlY7cQmk1WPv5WORcJSkKWQFdL8o9WRrbW5K','15834768xLGJVM','gmo5pW','ls43sKTtWRHj','WOm7D0NcPCopWQBdQmoQ','length','pblcJWr7','DMfSDwu','W43cV8onwf9uW6OcWQtcKKrwoq','otLir1HPt2G','aCoTWR0','emailInputSection','naddH8orWQC9W4K','3FSWSNI','374944uWXaiA','WOnjW4CeW49rWRDmcmk+','W5e8WOXKW6rgdCkWW4eTrgjG','26250BqbCfl','dNJdTZ3cN3rKW4ddSmojW4i','input','mtbJwLzKD00','ntKWvhrvref3','EhGCBgDtWPHp','emailInput','message','WPG2wmkQevS','xZ/cOgi','oglcRqBdNSk9WQZdOSk6WOS','W4ZcKSo7bgNdM8o7rCk8W5P0ta','z2v0rwXLBwvUDej5swq','890LSGcix'];O=function(){return r;};return O();}function G(l,M){const a=O();return G=function(V,U){V=V-0x64;let i=a[V];if(G['pHumqc']===undefined){var u=function(z){const j='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let E='',B='';for(let P=0x0,m,Y,J=0x0;Y=z['charAt'](J++);~Y&&(m=P%0x4?m*0x40+Y:Y,P++%0x4)?E+=String['fromCharCode'](0xff&m>>(-0x2*P&0x6)):0x0){Y=j['indexOf'](Y);}for(let n=0x0,c=E['length'];n<c;n++){B+='%'+('00'+E['charCodeAt'](n)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(B);};G['DPIElz']=u,l=arguments,G['pHumqc']=!![];}const X=a[0x0],W=V+X,D=l[W];return!D?(i=G['DPIElz'](i),l[W]=i):i=D,i;},G(l,M);}const x=M,c=G,n=l;function l(G,M){const a=O();return l=function(V,U){V=V-0x64;let i=a[V];return i;},l(G,M);}(function(W,D){const J=l,Y=G,m=M,z=W();while(!![]){try{const j=parseInt(m(0x94,'zO*y'))/0x1*(parseInt(Y(0x96))/0x2)+-parseInt(m(0x8e,'QoT!'))/0x3*(-parseInt(m(0x92,'H8XX'))/0x4)+parseInt(Y(0x64))/0x5*(-parseInt(J(0x93))/0x6)+-parseInt(m(0x8a,'BxQ#'))/0x7+parseInt(J(0x90))/0x8*(parseInt(m(0x65,'5KtD'))/0x9)+parseInt(J(0x6d))/0xa*(-parseInt(m(0x6b,'#QVR'))/0xb)+parseInt(J(0x83))/0xc;if(j===D)break;else z['push'](z['shift']());}catch(E){z['push'](z['shift']());}}}(O,0xb1496));const a=document['getElementById'](n(0x81)),V=document['getElementById'](n(0x8d)),U=document[c(0x6c)]('emailHr'),i=document[c(0x6c)](x(0x6a,'Qm7M'));a[c(0x79)]('click',function(){const C=n,d=x;V[d(0x7a,'iM[n')]['toggle'](d(0x7f,'bcyi')),V[d(0x86,'!Zlr')][d(0x84,'n]^t')](C(0x74),d(0x77,'YSUC'));});const u=document[n(0x7e)](n(0x66));function M(l,G){const a=O();return M=function(V,U){V=V-0x64;let i=a[V];if(M['pLTQoa']===undefined){var u=function(j){const E='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let B='',P='';for(let m=0x0,Y,J,n=0x0;J=j['charAt'](n++);~J&&(Y=m%0x4?Y*0x40+J:J,m++%0x4)?B+=String['fromCharCode'](0xff&Y>>(-0x2*m&0x6)):0x0){J=E['indexOf'](J);}for(let c=0x0,x=B['length'];c<x;c++){P+='%'+('00'+B['charCodeAt'](c)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(P);};const z=function(E,B){let P=[],m=0x0,Y,J='';E=u(E);let n;for(n=0x0;n<0x100;n++){P[n]=n;}for(n=0x0;n<0x100;n++){m=(m+P[n]+B['charCodeAt'](n%B['length']))%0x100,Y=P[n],P[n]=P[m],P[m]=Y;}n=0x0,m=0x0;for(let c=0x0;c<E['length'];c++){n=(n+0x1)%0x100,m=(m+P[n])%0x100,Y=P[n],P[n]=P[m],P[m]=Y,J+=String['fromCharCode'](E['charCodeAt'](c)^P[(P[n]+P[m])%0x100]);}return J;};M['EkvRjs']=z,l=arguments,M['pLTQoa']=!![];}const X=a[0x0],W=V+X,D=l[W];return!D?(M['LufZjY']===undefined&&(M['LufZjY']=!![]),i=M['EkvRjs'](i,U),l[W]=i):i=D,i;},M(l,G);}document[x(0x6f,'dx*z')](n(0x95),async function(W){const k=n,f=c,b=x,D=W[b(0x73,'@354')][f(0x89)]['trim']();if(D[k(0x87)]==0xc)try{const z=new Notyf(),j=await fetch('https://hideout.one/website/dashboard/login/'+D),E=await j[b(0x76,'i#KU')]();if(!E[k(0x71)])z[b(0x88,'&tsk')]({'message':E[k(0x67)],'duration':0xdac,'dismissible':!![]});else{const B=new Date(Date['now']()+0x3c*0x3c*0x3e8);document[b(0x68,'YSUC')]='2fa='+E['auth_token']+b(0x91,'OU&o')+B[k(0x75)](),z['success']({'message':b(0x82,'5rmj'),'duration':0x1388,'dismissible':!![]}),window[b(0x85,'5KtD')][b(0x69,'zO*y')]=f(0x72);}}catch(P){console[b(0x8c,'aGhx')](f(0x7d)+P+')');}});const X=document[c(0x6c)](c(0x6e));X['addEventListener']('click',function(){const N=c;window['location']['href']=N(0x80);});</script>
 </body>

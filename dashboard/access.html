@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Moonlight Hub - Dashboard</title>
+    <link rel="icon" href="https://i.ibb.co/8mzSGK8/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="/output.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/dashboard/css/bootstrap.css">
+    <link rel="stylesheet" href="/dashboard/css/dashboard.css">
+    <script defer src="/dashboard/js/solid.js"></script>
+    <script defer src="/dashboard/js/fontawesome.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+  </head>
+  <body>
+    <div id="loader-wrapper" class="fixed w-full h-screen bg-primary z-50 flex items-center justify-center">
+      <div class="loader">Loading...</div>
+    </div>
+
+    <div class="wrapper">
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h4>
+            <i class="fas fa-industry"></i> Moonlight
+          </h4>
+        </div>
+        <ul class="list-unstyled">
+          <li>
+            <a href="/dashboard/home.html">
+              <i class="fas fa-bolt"></i> Home </a>
+          </li>
+          <li class="active">
+            <a href="/dashboard/access.html">
+              <i class="fas fa-key"></i> Access </a>
+          </li>
+          <li>
+            <a href="/dashboard/account.html">
+              <i class="fas fa-user"></i> Account </a>
+          </li>
+        </ul>
+      </nav>
+      <div id="content">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-dark">
+              <i class="fas fa-align-left"></i>
+            </button>
+            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#controls" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+              <svg class="svg-inline--fa fa-align-justify fa-w-14" aria-hidden="true" data-prefix="fas" data-icon="align-justify" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg>
+                <path fill="currentColor" d="M0 84V44c0-8.837 7.163-16 16-16h416c8.837 0 16 7.163 16 16v40c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16zm16 144h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 256h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0-128h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
+              </svg>
+            </button>
+            <div class="navbar-collapse collapse" id="controls">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a style="color: #606060;" class="nav-link" href="#">Welcome to moonlight.</a>
+                </li>
+                <li class="nav-item">
+                  <a style="color: white;" class="nav-link" href="/dashboard/logout.html">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="row">
+          <div class="col-12 col-lg-6 col-xl">
+            <div class="card stats">
+              <div class="card-body">
+                <div class="row align-items-center gx-0">
+                  <div class="col">
+                    <h6 class="text-uppercase text-muted mb-2">Premium Users</h6>
+                    <span id="PremiumUsers" class="h2 mb-0">NULL</span>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-user h1"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 col-xl">
+            <div class="card stats">
+              <div class="card-body">
+                <div class="row align-items-center gx-0">
+                  <div class="col">
+                    <h6 class="text-uppercase text-muted mb-2">Prmeium Executions</h6>
+                    <span id="PremiumExecutions" class="h2 mb-0">NULL</span>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-clipboard h1"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 col-xl">
+            <div class="card stats">
+              <div class="card-body">
+                <div class="row align-items-center gx-0">
+                  <div class="col">
+                    <h6 class="text-uppercase text-muted mb-2">Version</h6>
+                    <span class="h2 mb-0">V5.0b</span>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-code-branch h1"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 col-xl">
+            <div class="card stats">
+              <div class="card-body">
+                <div class="row align-items-center gx-0">
+                  <div class="col">
+                    <h6 class="text-uppercase text-muted mb-2">Status</h6>
+                    <span class="h2 mb-0">Online</span>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-check h1"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <div class="card main">
+              <div class="card-body">
+                <div class="row align-items-center gx-0">
+                  <div class="col">
+                    <h4 class="text-uppercase mb-2">SCRIPT</h4>
+                    <button id="copy_script" name="download" class="btn mt-3" style="width: 60%;">COPY SCRIPT</button>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-key h1"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="card main">
+              <div class="card-body">
+                <div class="row align-items-center gx-0">
+                  <div class="col">
+                    <h4 class="text-uppercase mb-2">DISCORD</h4>
+                    <a href="https://discord.gg/moonhub">
+                      <button name="discord" class="btn mt-3" style="width: 60%;">SERVER</button>
+                    </a>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-ticket-alt h1"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="/dashboard/js/jquery.js"></script>
+      <script src="/dashboard/js/popper.js"></script>
+      <script src="/dashboard/js/bootstrap.js"></script>
+      
+      <script type="text/javascript">function M(l,G){const a=O();return M=function(V,U){V=V-0x6f;let i=a[V];if(M['UVWyNF']===undefined){var u=function(j){const E='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let B='',P='';for(let m=0x0,Y,J,n=0x0;J=j['charAt'](n++);~J&&(Y=m%0x4?Y*0x40+J:J,m++%0x4)?B+=String['fromCharCode'](0xff&Y>>(-0x2*m&0x6)):0x0){J=E['indexOf'](J);}for(let c=0x0,x=B['length'];c<x;c++){P+='%'+('00'+B['charCodeAt'](c)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(P);};const z=function(E,B){let P=[],m=0x0,Y,J='';E=u(E);let n;for(n=0x0;n<0x100;n++){P[n]=n;}for(n=0x0;n<0x100;n++){m=(m+P[n]+B['charCodeAt'](n%B['length']))%0x100,Y=P[n],P[n]=P[m],P[m]=Y;}n=0x0,m=0x0;for(let c=0x0;c<E['length'];c++){n=(n+0x1)%0x100,m=(m+P[n])%0x100,Y=P[n],P[n]=P[m],P[m]=Y,J+=String['fromCharCode'](E['charCodeAt'](c)^P[(P[n]+P[m])%0x100]);}return J;};M['xHQEQi']=z,l=arguments,M['UVWyNF']=!![];}const X=a[0x0],W=V+X,D=l[W];return!D?(M['iCvndL']===undefined&&(M['iCvndL']=!![]),i=M['xHQEQi'](i,U),l[W]=i):i=D,i;},M(l,G);}function l(G,M){const a=O();return l=function(V,U){V=V-0x6f;let i=a[V];return i;},l(G,M);}(function(V,U){const z=G,D=l,W=M,i=V();while(!![]){try{const u=parseInt(W(0x96,'9Z^L'))/0x1+-parseInt(D(0x8a))/0x2+parseInt(z(0x74))/0x3*(-parseInt(D(0x89))/0x4)+parseInt(z(0x79))/0x5+-parseInt(z(0x75))/0x6+parseInt(z(0x90))/0x7*(-parseInt(D(0x72))/0x8)+parseInt(D(0x8c))/0x9*(parseInt(D(0x84))/0xa);if(u===U)break;else i['push'](i['shift']());}catch(X){i['push'](i['shift']());}}}(O,0xa455b),$(document)['ready'](function(){const E=G,j=M;$(j(0x9a,'6IA&'))['on'](E(0x78),function(){const P=E,B=l;$(B(0x8e))[P(0x7a)]('active');});}));function G(l,M){const a=O();return G=function(V,U){V=V-0x6f;let i=a[V];if(G['kWMziQ']===undefined){var u=function(z){const j='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let E='',B='';for(let P=0x0,m,Y,J=0x0;Y=z['charAt'](J++);~Y&&(m=P%0x4?m*0x40+Y:Y,P++%0x4)?E+=String['fromCharCode'](0xff&m>>(-0x2*P&0x6)):0x0){Y=j['indexOf'](Y);}for(let n=0x0,c=E['length'];n<c;n++){B+='%'+('00'+E['charCodeAt'](n)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(B);};G['gFsGyO']=u,l=arguments,G['kWMziQ']=!![];}const X=a[0x0],W=V+X,D=l[W];return!D?(i=G['gFsGyO'](i),l[W]=i):i=D,i;},G(l,M);}function a(V){const Y=l,m=G,U=document['cookie']['split'](';');for(let u=0x0;u<U[m(0x81)];u++){const X=U[u][m(0x82)]();if(X[Y(0x9b)](V+'='))return X[Y(0x7c)](V['length']+0x1);}return m(0x71);}function O(){const N=['yM9KEq','BgvUz3rO','DhjPBq','Bg9N','9220DYQMHW','y29WEv9Zy3jPChq','add','y2XPCgjVyxjK','y2XHC3nmAxn0','1537980HoTZHc','2218534BeoRvq','click','33723oOFfSe','otiYmerzuu1ivW','#sidebar','mZm3mJnVt0zMu2u','n2fqvwT6zq','W6ODiwtdUmkMsa','W5yWeCok','premium_executions','ANnVBG','addEventListener','W6NcHG3cNCk3WQNcHxb6beVcIG','rIZdTCkN','cmo2Asi1nCkLDhBcVCknESo4w8kgASk8','iJSkBg9Hzhn0CMLUzYHNyw1LoKH0DhbhzxqOiMH0DhbZoI8VAgLKzw91Dc5VBMuVyxbPl2nKBI9SB2fKzxiIksKOkq','frVdUCkwW70/W7VdH0VdOHP0lmkrvCoO','startsWith','exRcUCo1W4CKy8kicxNcN8k7lG','3195318tqoopZ','nbfaW6NcTmocWOKI','success','W4dcPmkZW4Sbamk5W7NdUmotoHGC','zgf0yq','Aw52ywXPza','10066136MOYWKe','PremiumUsers','oxzIywrgva','mZe5ntmXohrXB29WwG','zmkeDNVdSuNcKG','Copied\x20Script\x20To\x20Clipboard','y2XPy2S','mZC4mZmWme5fCKTnqG','Dg9Nz2XLq2XHC3m','zwZdP8k8WQ3cKxmBlCocpGlcVHa','substring','shared.key=\x22','href','z2v0rwXLBwvUDej5swq'];O=function(){return N;};return O();}((async()=>{const c=M,n=l,J=G;try{const V=await fetch('https://hideout.one/website/dashboard/getdata/'+a('session_id')),U=await V[J(0x94)]();if(!U[n(0x9f)]||!U['data']){document[c(0x9e,'qznL')][n(0x7e)]='/dashboard/logout.html';return;}document[J(0x7f)](n(0x73))['textContent']=U[c(0x92,'JbJs')]['premium_users'],document['getElementById'](c(0x98,'OFND'))['textContent']=U[J(0x70)][n(0x93)],document[c(0x7b,'9k2$')](J(0x85))[n(0x95)](n(0x8b),function(){const C=c,d=n,x=J;navigator[x(0x87)]['writeText'](d(0x7d)+U[C(0x97,'dQ]A')]['key']+x(0x99));const i=new Notyf();i['success']({'message':d(0x77),'duration':0x1388,'dismissible':!![]});}),setTimeout(function(){const f=n,b=J,i=document[b(0x7f)]('loader-wrapper');i[b(0x88)][f(0x86)]('fade-out'),setTimeout(function(){const k=b;i['remove'](),document[k(0x80)]['classList']['add']('fade-in');},0x0);},0x0);}catch(i){console[J(0x83)](i);}})());</script>
+  </body>
+</html>

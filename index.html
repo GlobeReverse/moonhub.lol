@@ -25,10 +25,6 @@
 <meta property="twitter:title" content="Moonlight Hub — Roblox Scripts" />
 <meta property="twitter:description" content="Moonlight offers the best Roblox hacks for your needs, many features including aimbot, esp, autofarm & more!" />
 <meta property="twitter:image" content="https://i.ibb.co/w76CvBd/banner-moonlight.png" />
-
-
-
-
   <link rel="stylesheet" href="./output.css">
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
@@ -237,7 +233,9 @@
 <script src="https://unpkg.com/fast-average-color/dist/index.browser.min.js"></script>
 <script src="./assets/js/glow.js"></script>
 <script src="./assets/js/faq.js"></script>
+
 <script>
+  //-- Navbar
   window.addEventListener('scroll', () => {
     const navbar = document.getElementById('navbar');
     if (window.scrollY > 50) {
@@ -246,8 +244,8 @@
       navbar.classList.add('navbar-scrolled');
     }
   });
-</script>
-<script>
+
+  //-- Loading Screen
   window.addEventListener('load', function() {
     const loaderWrapper = document.getElementById('loader-wrapper');
     const body = document.body;
@@ -258,12 +256,17 @@
       setTimeout(function() {
         loaderWrapper.remove();
         body.classList.add('fade-in');
-      }, 0); // Adjust timing to match the loader fade-out transition time
-    }, 0); // 2000 milliseconds = 2 seconds
+      }, 0);
+    }, 0);
+  });
+
+  //-- Event Listener
+  document.addEventListener('keydown', function(event) {
+    if (event.key == "L" || event.key == "l") {
+      window.location.href = "/loginsignup/login.html";
+    }
   });
 </script>
-
-
 
 </body>
 </html>

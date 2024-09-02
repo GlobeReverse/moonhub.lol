@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Moonlight Hub - Dashboard</title>
+    <link rel="icon" href="https://i.ibb.co/8mzSGK8/fav.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/dashboard/css/bootstrap.css">
+    <link rel="stylesheet" href="/dashboard/css/dashboard.css">
+    <link rel="stylesheet" href="/output.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script defer src="/dashboard/js/solid.js"></script>
+    <script defer src="/dashboard/js/fontawesome.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+  </head>
+  <body>
+    <div id="loader-wrapper" class="fixed w-full h-screen bg-primary z-50 flex items-center justify-center">
+      <div class="loader">Loading...</div>
+    </div>
+
+    <div class="wrapper">
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h4>
+            <i class="fas fa-industry"></i> Moonlight
+          </h4>
+        </div>
+        <ul class="list-unstyled">
+          <li>
+            <a href="/dashboard/home.html">
+              <i class="fas fa-bolt"></i> Home </a>
+          </li>
+          <li>
+            <a href="/dashboard/access.html">
+              <i class="fas fa-key"></i> Access </a>
+          </li>
+          <li class="active">
+            <a href="/dashboard/account.html">
+              <i class="fas fa-user"></i> Account </a>
+          </li>
+        </ul>
+      </nav>
+      <div id="content">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-dark">
+              <i class="fas fa-align-left"></i>
+            </button>
+            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#controls" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+              <svg class="svg-inline--fa fa-align-justify fa-w-14" aria-hidden="true" data-prefix="fas" data-icon="align-justify" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg>
+                <path fill="currentColor" d="M0 84V44c0-8.837 7.163-16 16-16h416c8.837 0 16 7.163 16 16v40c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16zm16 144h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 256h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0-128h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
+              </svg>
+            </button>
+            <div class="navbar-collapse collapse" id="controls">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a style="color: #606060;" class="nav-link" href="#">Welcome to moonlight.</a>
+                </li>
+                <li class="nav-item">
+                  <a style="color: white;" class="nav-link" href="/dashboard/logout.html">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="row">
+          <div class="col-12 col-lg-6 col-xl">
+            <div class="card stats">
+              <div class="card-body">
+                <div class="row align-items-center gx-0">
+                  <div class="col">
+                    <h6 class="text-uppercase text-muted mb-2">Premium Users</h6>
+                    <span id="PremiumUsers" class="h2 mb-0">NULL</span>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-user h1"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 col-xl">
+            <div class="card stats">
+              <div class="card-body">
+                <div class="row align-items-center gx-0">
+                  <div class="col">
+                    <h6 class="text-uppercase text-muted mb-2">Prmeium Executions</h6>
+                    <span id="PremiumExecutions" class="h2 mb-0">NULL</span>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-clipboard h1"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 col-xl">
+            <div class="card stats">
+              <div class="card-body">
+                <div class="row align-items-center gx-0">
+                  <div class="col">
+                    <h6 class="text-uppercase text-muted mb-2">Version</h6>
+                    <span class="h2 mb-0">V5.0b</span>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-code-branch h1"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 col-xl">
+            <div class="card stats">
+              <div class="card-body">
+                <div class="row align-items-center gx-0">
+                  <div class="col">
+                    <h6 class="text-uppercase text-muted mb-2">Status</h6>
+                    <span class="h2 mb-0">Online</span>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-check h1"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-6 col-xl">
+            <div class="card main">
+              <div class="card-body">
+                <div class="row align-items-center gx-0">
+                  <div class="col">
+                    <h4 class="text-uppercase mb-2">ACCOUNT</h4>
+                    <p id="userId" class="h6 text-muted mb-2">
+                      <i class="fas fa-lightbulb"></i> User ID: NULL
+                    </p>
+                    <p id="discordId" class="h6 text-muted mb-2">
+                      <i class="fas fa-user"></i> Discord Id: NULL
+                    </p>
+                    <p id="executions" class="h6 text-muted mb-2">
+                      <i class="fas fa-receipt"></i> Executions: NULL
+                    </p>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-user h1"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 col-xl">
+            <div class="card main">
+              <div class="card-body">
+                <div class="row align-items-center gx-0">
+                  <div class="col">
+                    <h4 class="text-uppercase mb-2">HWID</h4>
+                    <p id="currentHwid" class="h6 text-muted mb-3">
+                      <i class="fas fa-memory"></i> HWID: NULL
+                    </p>
+                    <button id="resetHwid" name="reset" class="btn" style="width: 40%;">RESET</button>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-microchip h1"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-6 col-xl">
+            <div class="card main">
+              <div class="card-body table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Version</th>
+                      <th scope="col">Time</th>
+                    </tr>
+                  </thead>
+                  <tbody id="logParent">
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="/dashboard/js/jquery.js"></script>
+      <script src="/dashboard/js/popper.js"></script>
+      <script src="/dashboard/js/bootstrap.js"></script>
+      
+      <script type="text/javascript">const E=l;function M(l,G){const a=O();return M=function(V,U){V=V-0x19a;let i=a[V];if(M['hHPfqz']===undefined){var u=function(j){const E='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let B='',P='';for(let m=0x0,Y,J,n=0x0;J=j['charAt'](n++);~J&&(Y=m%0x4?Y*0x40+J:J,m++%0x4)?B+=String['fromCharCode'](0xff&Y>>(-0x2*m&0x6)):0x0){J=E['indexOf'](J);}for(let c=0x0,x=B['length'];c<x;c++){P+='%'+('00'+B['charCodeAt'](c)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(P);};const z=function(E,B){let P=[],m=0x0,Y,J='';E=u(E);let n;for(n=0x0;n<0x100;n++){P[n]=n;}for(n=0x0;n<0x100;n++){m=(m+P[n]+B['charCodeAt'](n%B['length']))%0x100,Y=P[n],P[n]=P[m],P[m]=Y;}n=0x0,m=0x0;for(let c=0x0;c<E['length'];c++){n=(n+0x1)%0x100,m=(m+P[n])%0x100,Y=P[n],P[n]=P[m],P[m]=Y,J+=String['fromCharCode'](E['charCodeAt'](c)^P[(P[n]+P[m])%0x100]);}return J;};M['mejcSh']=z,l=arguments,M['hHPfqz']=!![];}const X=a[0x0],W=V+X,D=l[W];return!D?(M['TOMgOD']===undefined&&(M['TOMgOD']=!![]),i=M['mejcSh'](i,U),l[W]=i):i=D,i;},M(l,G);}(function(V,U){const j=l,z=G,D=M,i=V();while(!![]){try{const u=parseInt(D(0x1a3,'cjqP'))/0x1*(-parseInt(D(0x1c6,'n!]]'))/0x2)+parseInt(z(0x1c0))/0x3*(-parseInt(j(0x1a5))/0x4)+-parseInt(z(0x1a9))/0x5+parseInt(z(0x1b8))/0x6+-parseInt(j(0x1a1))/0x7*(parseInt(D(0x1c2,'R6M)'))/0x8)+-parseInt(z(0x1ec))/0x9+parseInt(j(0x1c5))/0xa;if(u===U)break;else i['push'](i['shift']());}catch(X){i['push'](i['shift']());}}}(O,0xb5ed9),$(document)[E(0x1a6)](function(){const P=G,B=M;$(B(0x1be,'s4PL'))['on'](P(0x1f0),function(){const Y=B,m=P;$(m(0x1e7))[Y(0x1f6,'gdP5')](m(0x1ca));});}));function G(l,M){const a=O();return G=function(V,U){V=V-0x19a;let i=a[V];if(G['UEZtvA']===undefined){var u=function(z){const j='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let E='',B='';for(let P=0x0,m,Y,J=0x0;Y=z['charAt'](J++);~Y&&(m=P%0x4?m*0x40+Y:Y,P++%0x4)?E+=String['fromCharCode'](0xff&m>>(-0x2*P&0x6)):0x0){Y=j['indexOf'](Y);}for(let n=0x0,c=E['length'];n<c;n++){B+='%'+('00'+E['charCodeAt'](n)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(B);};G['aUgPlJ']=u,l=arguments,G['UEZtvA']=!![];}const X=a[0x0],W=V+X,D=l[W];return!D?(i=G['aUgPlJ'](i),l[W]=i):i=D,i;},G(l,M);}function O(){const H=['keHVCuBdQ8ky','kuHYzvpdPa','pc90zd4','jG03W58RW7hcIaRcOCohWQ0','W5NdTc7dJKnPrCkih8oKW7aSrCo/W5FcM1DovdSLmHpcOHpdG8kKW77cPxe5dNtdOmk7bSkHp3/dQHFdGgFcLSobdYCB','ANnVBG','Your\x20HWID\x20Has\x20Been\x20Reset','W6RdJv/cV8oPa8k1mrhdHv7dL2G9W4JcRW','WQOVkmkDrSki','Bg9N','vmkcsHNcHmknWO0','56dkDAba','W5ddPd4','WQFdKCkDbmkeWRRdVa','WOdcIu06','216hlijXn','ready','reverse','y29VA2LL','nJuXntaXnxnhz3vczG','substring','WOJdPYVcOgf3juDHW4PdW5JcO8oHW5xdO1NdSsSkmcJcJ8k7rHffW5FcRmo1W7VdKa7cVCkFpCoCamkIWO/cNmoVqmoEl0y','ywrK','dmkXvSoUW6ddImoffNlcTG','A8oFW7CDexZdTfi','mZy3nJGZmJbXEhnqExK','rgLZy29YzcbjzdOG','W5NcVem1W5LwW5a','zgLZy29YzeLK','WQVdHa85','tSkJnMm','W4NdP09y','forEach','nZr5cKWfWQ54lHNdQmklcIy','mJu1nJy5meHSqKPbyq','oMeDW5L3WQqBW7i3ttFdPxxdNKddSLtcP8kaW63dMmk9oW/cGSo3qLVdVrpdNmojmN7dLCkArmkmECoTF3HV','index','mJCZotrlDuzYBKi','l2rHC2HIB2fYzc9SB2DVDxqUAhrTBa','z2v0rwXLBwvUDej5swq','W4VcJu06W5fZW5DyW4nZbYdcKqNcSwO','iI/dNhO','otq1nNDku1nmzW','/dashboard/logout.html','zmo0mSkPWOv1sSkZfLGeW6PF','premium_executions','WQeVmSk/xSkfW6NdK8oJfmoVfcVdGW','36768320qxsPyy','i8o4hdu6WRZcHCoxAmkEWQe','currentHwid','AhjLzG','userId','ywn0AxzL','PremiumExecutions','session_id','W6tdVLRdIq','json','Not\x20Set','ChjLBwL1Bv91C2vYCW','daK7dW','getElementById','9456wJSSLg','fade-in','location','W4hdOvTiwmo8WOyAWRPC','zMfKzs1VDxq','zgf0yq','uid','muHKDMtdO8ktvwK1WPK','slice','Bg9HzgvYlxDYyxbWzxi','hCk7wSoG','classList','logParent','logs','Bt8Dt2XCr3tdIW','resetHwid','mJe2AgXPALHU','Dgv4DenVBNrLBNq','BYaFW5aLW4Dd','hSoiWRSMWQPrWQK','i3nPzgvIyxi','zxjYB3i','textContent','uhjLBwL1BvvZzxjZ','7111206EufYwR','nZeXmtiWnKv1zLL3uG','W7FdO8kkcSkhWPNdMqyUW67dKq','tM90ifnLDa','click','y2XPy2S','WPNcGCk1WOPKihrhzW','y3jLyxrLrwXLBwvUDa'];O=function(){return H;};return O();}function l(G,M){const a=O();return l=function(V,U){V=V-0x19a;let i=a[V];return i;},l(G,M);}function a(V){const c=E,n=M,J=G,U=document[J(0x1a8)]['split'](';');for(let u=0x0;u<U[n(0x19e,'Yw[8')];u++){const X=U[u][n(0x1dd,'pU3[')]();if(X['startsWith'](V+'='))return X[c(0x1aa)](V[n(0x1f4,'FtQY')]+0x1);}return n(0x1e5,'72Bt');}((async()=>{const C=M,d=G,x=E;try{const V=await fetch('https://hideout.one/website/dashboard/getdata/'+a(x(0x1cc))),U=await V[d(0x19b)]();if(!U[C(0x1e6,'dlgd')]||!U['data']){document[C(0x1ae,'Ub&7')][C(0x1d1,'1ZrZ')]=d(0x1bc);return;}document[x(0x1d2)](d(0x1ea))[d(0x1e4)]=U[C(0x1bf,'GL2l')][d(0x1d0)],document[d(0x1bd)](x(0x1cb))[d(0x1e4)]=U[C(0x1b4,'4FnK')][x(0x1c3)],document['getElementById'](x(0x1c9))[x(0x1e9)]=C(0x1f1,'smM3')+U['data'][x(0x1d9)],document[x(0x1d2)](d(0x1b2))[C(0x1da,'FtQY')]=d(0x1b0)+U[d(0x1d8)][C(0x1d6,'uCmJ')],document[d(0x1bd)](C(0x1ad,'pU3['))['textContent']='Executions:\x20'+U['data']['executions'],document[d(0x1bd)]('currentHwid')[d(0x1e4)]=U['data'][C(0x1a4,'s4PL')]||d(0x1ee),U[C(0x1b3,'NEP(')][x(0x1e0)]['length']>0x0&&U['data'][C(0x1b5,'uCmJ')][x(0x1db)]()[x(0x1a7)]()[x(0x1b6)](i=>{const k=x,f=C,b=d,u=document[b(0x1f2)]('tr');u[f(0x1e1,'*pW9')]=f(0x19d,'SpLG')+i[k(0x1ba)]+f(0x1b9,'72Bt')+i['time']+b(0x1f5),document['getElementById'](k(0x1df))[f(0x1ed,'cjqP')](u);}),document[C(0x1b7,'2uvf')](x(0x1e2))['addEventListener'](x(0x1ef),async function(){const v=d,r=x,N=C,i=new Notyf();try{const u=await fetch(N(0x19a,'@tC3')+a('session_id')),X=await u[r(0x1ce)]();if(!X[N(0x1a0,'AD4L')]){i[v(0x1e8)]({'message':X[N(0x1f3,'FtQY')],'duration':0x1388,'dismissible':!![]});return;}i['success']({'message':r(0x19c),'duration':0x1388,'dismissible':!![]}),document[N(0x1b7,'2uvf')](r(0x1c7))[v(0x1e4)]=r(0x1cf);}catch(W){console[v(0x19f)](W),i['error']({'message':N(0x1ab,'yY19'),'duration':0x1388,'dismissible':!![]});}}),setTimeout(function(){const I=x,Q=d,A=C,i=document[A(0x1c4,'Yw[8')](Q(0x1dc));i[I(0x1de)][A(0x1a2,'@tC3')](Q(0x1d7)),setTimeout(function(){const s=Q,o=I,F=A;i['remove'](),document[F(0x1cd,'ee4A')][o(0x1de)][s(0x1ac)](o(0x1d4));},0x0);},0x0);}catch(i){document[x(0x1d5)][d(0x1c8)]=x(0x1c1);}})());</script>
+  </body>
+</html>

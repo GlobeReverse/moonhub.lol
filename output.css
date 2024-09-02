@@ -194,7 +194,6 @@ table {
 3. Remove default padding in all browsers.
 */
 
-button,
 input,
 optgroup,
 select,
@@ -235,7 +234,6 @@ select {
 2. Remove default button styles.
 */
 
-button,
 input:where([type='button']),
 input:where([type='reset']),
 input:where([type='submit']) {
