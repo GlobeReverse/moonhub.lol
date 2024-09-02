@@ -9,7 +9,7 @@
 <img src="https://r2.e-z.host/2319035a-e3c7-432d-9413-f474d133b997/ha2im0fz.png" />
 
 ## Contributions
-- [Sye](https://github.com/Sye0001) Creating the landing page aswell as the login page
+- [Sye](https://github.com/Sye0001) Creating the landing page aswell as the login & 2fa page
 - [Globe](https://github.com/GlobeReverse) Creating the dashboard aswell as the api it uses for everything
   
 ## Copyright Notice
