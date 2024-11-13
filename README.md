@@ -1,3 +1,5 @@
+This is fully made with html css and js connected to my vps since im not paying hosting for a backend language like php
+
 ## Content
 - [Website Preview](#website-preview)
 - [Contributions](#contributions)
